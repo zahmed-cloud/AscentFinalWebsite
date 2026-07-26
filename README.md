@@ -1,62 +1,98 @@
-# Ascent — website
+# Ascent — Company Website
 
-A multi-page static site for **Ascent**, a B2B GTM & Outbound agency. Design: "Dark Swiss" (charcoal + bone + red, Archivo + IBM Plex Mono, grid-led, index numbering).
+The marketing site for **Ascent**, a GTM agency for B2B companies.
+Tagline: *Pipeline, authority and infrastructure for B2B.*
 
-Domain: **getascent.co**
+- **Production domain:** `getascent.co` (root)
+- **Sister product:** Ascent Outbound OS, the free LinkedIn tool at `os.getascent.co` (separate repo: `zahmed-cloud/outboundos`)
+- **Owner:** Jamil Ahmed, Founder & Growth Partner
 
-## Run it
+---
 
-It is plain HTML/CSS/JS. No build step.
+## Tech at a glance
 
-- **Quickest:** double-click `index.html` (or open in a browser).
-- **Recommended (so relative links behave):** run a local server from this folder:
-  ```bash
-  python3 -m http.server 8080
-  # then open http://localhost:8080
-  ```
-- **VS Code:** open this folder, then use the "Live Server" extension, or just open `index.html`.
+Plain **HTML + CSS + vanilla JavaScript**. No framework, no build step, no dependencies.
+Google Fonts (Archivo + IBM Plex Mono) is the only external resource.
 
-## Structure
+If you can edit an HTML file, you can maintain this site.
+
+## Project structure
 
 ```
-ascent_site/
-├── index.html          Home
-├── services.html       Services (6 detailed services, ids #s1..#s6)
-├── results.html        Results (case studies + testimonials)
-├── industries.html     Industries (who we work with)
-├── about.html          About (story, philosophy, difference)
-├── how-we-work.html    How We Work (process, 3 packages, focus)
-├── blog.html           Blog index (card grid)
-├── article.html        Blog article template
-├── contact.html        Contact (booking + form)
-├── assets/founder.png  Founder photo (local)
-├── favicon.svg         Browser-tab icon
-├── styles.css          The whole design system (shared by every page)
-├── script.js           Scroll reveal + mobile nav (shared)
-├── _partials.html      Reference: the exact shared NAV / CTA band / FOOTER markup
-└── README.md
+AscentFinalWebsite/
+├── index.html            Home
+├── services.html         Services (6 detailed services, anchors #s1..#s6)
+├── results.html          Results (case studies + testimonials)
+├── industries.html       Industries (who we work with)
+├── about.html            About (story, founder, philosophy, difference)
+├── how-we-work.html      How We Work (process, 3 packages, engagement note)
+├── blog.html             Blog index (card grid)
+├── article.html          Blog article template
+├── contact.html          Contact (booking embed + form)
+│
+├── css/
+│   └── styles.css        THE design system. Every page shares this one file.
+├── js/
+│   └── script.js         Scroll reveals, mobile nav, mega-menu accordion.
+├── assets/
+│   ├── founder.png       Founder photo (transparent cut-out)
+│   └── favicon.svg       Browser-tab icon
+│
+├── docs/
+│   ├── DESIGN-SYSTEM.md        Palette, type, components, layout rules
+│   ├── CONTENT-GUIDE.md        Locked copy, writing rules, page content map
+│   ├── DEPLOYMENT.md           GitHub → Vercel → domain, pre-launch checklist
+│   └── partials-reference.html Canonical shared NAV / CTA band / FOOTER markup
+│
+└── README.md             You are here
 ```
 
-Every page shares `styles.css`, `script.js`, and the same NAV / CTA band / FOOTER. To change the design once and everywhere, edit `styles.css`. To change nav or footer, update the markup in each page (see `_partials.html` for the canonical block).
+## Run it locally
 
-## Placeholders to replace before launch
+No build step. Either:
 
-Nothing is faked. These are the clearly-marked spots to fill with real assets:
+```bash
+# quickest
+open index.html
 
-1. **Booking link** — every "Book a call" points to `contact.html#book`, and the Contact page has a `.embed` placeholder. Drop in your Calendly (or similar) embed there, and optionally point the buttons straight at the booking URL.
-2. **Testimonials** — real names are in place (Abbie Bowtell / 360Partners, Adam Pounds, Feodor Kozmin, Jacob Mars, James McLoughlin, Tim Hickle) with quotes marked "Real quote to add". Paste the actual LinkedIn recommendation text.
-3. **Case study outcomes** — the 360Partners case has "Real outcome to add". Add the real result.
-4. **Blog** — `blog.html` + `article.html` use sample posts. Replace with real articles, or hide Blog from the nav until ready (an empty blog signals inactivity).
-5. **Images** — `.thumb` blocks (blog, article featured image) are labelled placeholders. Add real images.
-6. **Founder photo** — on About, served locally from `assets/founder.png`.
-7. **Analytics + OG/social tags** — add before deploy (favicon is done, `favicon.svg`).
+# recommended (relative links + fonts behave exactly like production)
+python3 -m http.server 8080
+# then open http://localhost:8080
+```
 
-## Deploy
+VS Code users: the **Live Server** extension works great (right-click `index.html` → Open with Live Server).
 
-Static site, so any static host works: Vercel, Netlify, or Cloudflare Pages. Push the folder, connect `getascent.co`, done. (Your tool already lives at `os.getascent.co`.)
+## How the site is wired
 
-## Writing rules (keep consistent)
+- **One stylesheet.** `css/styles.css` holds the entire design system. Change a colour or component there and every page updates. Never write per-page `<style>` blocks.
+- **One script.** `js/script.js` powers the scroll-reveal (`[data-r]` elements), the mobile burger menu, and the Services mega-menu accordion on mobile. Desktop mega-menu hover is pure CSS.
+- **Shared chrome.** Every page carries the same NAV, CTA band, and FOOTER. There is no templating; the markup is duplicated per page. The canonical copy of those blocks lives in `docs/partials-reference.html`. **If you change the nav or footer, change it on every page** (a find-and-replace across `*.html` is the reliable way).
+- **Active nav state.** Each page marks its own nav link with `class="active"` (Contact marks the "Get in touch" link).
+- **Section rhythm.** Pages alternate dark (charcoal) and light (bone) sections. Light sections use `<section class="light">` and the stylesheet re-colours components automatically. See `docs/DESIGN-SYSTEM.md`.
 
-- No em-dashes in body copy (commas or full stops). The only dash is inside the locked `EST. 2022 — USA / UK / UAE / AU / EU` label.
-- No emojis.
-- Voice: plain, confident, operator-to-operator, Aussie-inflected.
+## Editing rules (read before touching copy)
+
+Some copy is **locked** and some is placeholder. Writing style rules (no em-dashes, no emojis, the voice) are strict. **Read `docs/CONTENT-GUIDE.md` before editing any text.**
+
+## Before launch (open items)
+
+Every placeholder is clearly marked in the pages; nothing is faked.
+
+1. **Booking link** — all "Book a call" buttons point to `contact.html#book`; the Contact page has a labelled `.embed` placeholder for Calendly (or similar).
+2. **Testimonials** (`results.html`, `index.html`) — real names are in place, quotes are marked "Real quote to add". Paste the actual LinkedIn recommendations.
+3. **Case study outcome** (`results.html`) — 360Partners outcome is marked "Real outcome to add".
+4. **Blog** — `blog.html` and `article.html` contain clearly-labelled sample posts. Replace with real articles or hide Blog from the nav until ready.
+5. **Images** — `.thumb` blocks are labelled placeholders.
+6. **OG/social tags + analytics** — not yet added; do this at deploy time (see `docs/DEPLOYMENT.md`).
+
+## Deploying
+
+See `docs/DEPLOYMENT.md` for the full GitHub → Vercel → `getascent.co` walkthrough and the pre-launch checklist.
+
+## House rules for future changes
+
+- Match the existing design system; don't invent new colours, fonts, or component styles ad hoc.
+- No frameworks, no build tooling, no npm. The zero-dependency setup is deliberate.
+- Keep pages accessible: alt text on images, labels on form fields, visible focus states (already wired).
+- Test at mobile width (≤860px) after any nav or layout change.
+- Commit messages: short imperative summary + a body explaining why.

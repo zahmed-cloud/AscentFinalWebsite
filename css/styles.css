@@ -1,6 +1,14 @@
 /* ============================================================
    ASCENT — Dark Swiss design system
-   Shared across all pages. Do not fork per-page styles.
+   The single stylesheet shared by every page. Do not fork
+   per-page styles. Read docs/DESIGN-SYSTEM.md before editing.
+
+   Contents:
+     1. Tokens (:root)          6. Sections + layout primitives
+     2. Base + buttons          7. Components (services, packs,
+     3. Scroll reveal              quotes, cases, blog, prose,
+     4. Nav + mega menu            founder, form, cta band)
+     5. Heroes + ticker         8. Footer, utilities, responsive
    ============================================================ */
 :root{
   --ink:#161619;--ink2:#0f0f12;--bone:#e9e6dc;--red:#8d1c3d;

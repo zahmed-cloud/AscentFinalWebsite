@@ -1,4 +1,12 @@
-/* Ascent — shared behaviour: scroll reveal + mobile nav */
+/* ============================================================
+   Ascent — shared behaviour for every page.
+   1. Scroll reveal: elements with [data-r] fade in on scroll
+      (hero elements reveal on load instead).
+   2. Mobile nav: burger toggles .nl.open + aria-expanded.
+   3. Services mega-menu: desktop hover is pure CSS; on mobile
+      first tap expands the accordion, second tap navigates.
+   Read docs/DESIGN-SYSTEM.md for the full picture.
+   ============================================================ */
 (function () {
   // scroll reveal
   var els = document.querySelectorAll('[data-r]');
