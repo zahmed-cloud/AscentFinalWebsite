@@ -83,7 +83,7 @@ Every placeholder is clearly marked in the pages; nothing is faked.
 3. **Case study outcome** (`results.html`) — 360Partners outcome is marked "Real outcome to add".
 4. **Blog** — `blog.html` and `article.html` contain clearly-labelled sample posts. Replace with real articles or hide Blog from the nav until ready.
 5. **Images** — `.thumb` blocks are labelled placeholders.
-6. **OG/social tags + analytics** — not yet added; do this at deploy time (see `docs/DEPLOYMENT.md`).
+6. **Analytics** — owner's choice, add at deploy time. (OG/social tags, canonical URLs, robots.txt, sitemap.xml and the OG image are done.)
 
 ## Deploying
 

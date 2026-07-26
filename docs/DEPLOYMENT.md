@@ -49,10 +49,10 @@ Content (see `CONTENT-GUIDE.md` §5 for details):
 - [ ] Placeholder `.thumb` images replaced
 
 Technical:
-- [ ] Add OG/social meta tags to every page (`og:title`, `og:description`, `og:image` 1200×630, `twitter:card`) — create a Mulberry OG image like the tool's
-- [ ] Add canonical URLs (`<link rel="canonical" href="https://getascent.co/...">`)
+- [x] OG/social meta tags on every page + Mulberry OG image (`assets/og.png`)
+- [x] Canonical URLs on every page
+- [x] `robots.txt` + `sitemap.xml`
 - [ ] Add analytics (owner's choice; keep it one lightweight script)
-- [ ] `robots.txt` + `sitemap.xml`
 - [ ] Contact form backend: point the form `action` at Formspree/serverless, or remove the form and keep booking + email
 - [ ] Click through every page on the live preview URL, desktop + phone
 - [ ] Run the link check (below) one last time
