@@ -27,7 +27,8 @@ AscentFinalWebsite/
 ├── about.html            About (story, founder, philosophy, difference)
 ├── how-we-work.html      How We Work (process, 3 packages, engagement note)
 ├── blog.html             Blog index (card grid)
-├── article.html          Blog article template
+├── article-*.html        Published blog posts (6 live)
+├── article-template.html Template: copy this to write a new post
 ├── contact.html          Contact (booking embed + form)
 │
 ├── css/
@@ -42,6 +43,7 @@ AscentFinalWebsite/
 │   ├── DESIGN-SYSTEM.md        Palette, type, components, layout rules
 │   ├── CONTENT-GUIDE.md        Locked copy, writing rules, page content map
 │   ├── DEPLOYMENT.md           GitHub → Vercel → domain, pre-launch checklist
+│   ├── BLOG-GUIDE.md           How to write + publish a post (start here for blogging)
 │   └── partials-reference.html Canonical shared NAV / CTA band / FOOTER markup
 │
 └── README.md             You are here
@@ -78,10 +80,10 @@ Some copy is **locked** and some is placeholder. Writing style rules (no em-dash
 
 Every placeholder is clearly marked in the pages; nothing is faked.
 
-1. **Booking link** — all "Book a call" buttons point to `contact.html#book`; the Contact page has a labelled `.embed` placeholder for Calendly (or similar).
+1. ~~Booking link~~ — DONE: every "Book a call" opens cal.com/jamilahmed/30min; Contact embeds it inline.
 2. **Testimonials** (`results.html`, `index.html`) — real names are in place, quotes are marked "Real quote to add". Paste the actual LinkedIn recommendations.
 3. **Case study outcome** (`results.html`) — 360Partners outcome is marked "Real outcome to add".
-4. **Blog** — `blog.html` and `article.html` contain clearly-labelled sample posts. Replace with real articles or hide Blog from the nav until ready.
+4. ~~Blog~~ — DONE: six real posts live with Swiss cover art. To publish more, see `docs/BLOG-GUIDE.md`.
 5. **Images** — `.thumb` blocks are labelled placeholders.
 6. **Analytics** — owner's choice, add at deploy time. (OG/social tags, canonical URLs, robots.txt, sitemap.xml and the OG image are done.)
 

@@ -67,14 +67,23 @@ nav{position:sticky;top:0;z-index:50;background:rgba(22,22,25,.86);backdrop-filt
   transition:opacity .18s ease,visibility .18s,transform .22s cubic-bezier(.19,1,.22,1);transition-delay:150ms;
   box-shadow:0 24px 44px rgba(0,0,0,.4)}
 .has-mega:hover .mega,.has-mega:focus-within .mega,.mega:hover{opacity:1;visibility:visible;transform:none;transition-delay:0s}
-.mega-in{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;padding:36px var(--pad) 42px}
-.mega-col .mega-h{font-family:var(--m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--redt);
-  border-bottom:1px solid var(--ld);padding-bottom:12px;margin-bottom:8px}
-.mega-link{display:block;padding:13px 0;border-bottom:1px solid rgba(233,230,220,.07)}
-.mega-link:last-child{border-bottom:none}
-.mega-link b{display:block;font-family:var(--a);font-weight:700;font-size:15px;color:var(--bone);transition:color .15s;letter-spacing:-.005em}
-.mega-link span{display:block;font-family:var(--a);font-weight:400;font-size:13px;color:var(--dim);margin-top:3px;line-height:1.4}
-.mega-link:hover b{color:var(--redt)}
+.mega-in{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:64px;padding:60px var(--pad) 72px}
+.mega-intro .mega-ih{font-family:var(--a);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;
+  font-size:24px;color:var(--bone);line-height:1.05}
+.mega-intro p{font-family:var(--a);font-size:14.5px;line-height:1.55;color:rgba(233,230,220,.7);
+  margin:16px 0 26px;max-width:30ch}
+.mega-intro .mega-all{display:inline-flex;align-items:center;gap:10px;font-family:var(--a);font-weight:700;
+  font-size:14.5px;color:var(--redt);transition:color .15s}
+.mega-intro .mega-all:hover{color:var(--bone)}
+.mega-col .mega-h{font-family:var(--m);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);
+  border-bottom:1px solid var(--red);padding-bottom:14px;margin-bottom:14px}
+.mega-link{display:block;padding:19px 16px 19px 14px;margin:0 -16px 0 -16px;border-left:2px solid transparent;
+  border-bottom:1px solid rgba(141,28,61,.28);transition:background .15s,border-color .15s}
+.mega-link:last-child{border-bottom:1px solid transparent}
+.mega-link b{display:block;font-family:var(--a);font-weight:700;font-size:15.5px;color:var(--bone);letter-spacing:-.005em}
+.mega-link span{display:block;font-family:var(--a);font-weight:400;font-size:13.5px;color:rgba(233,230,220,.7);margin-top:6px;line-height:1.5}
+.mega-link:hover{background:rgba(141,28,61,.16);border-left-color:var(--red)}
+.mega-link:hover span{color:rgba(233,230,220,.85)}
 
 /* ---------- HOME HERO ---------- */
 .hero{border-bottom:1px solid var(--ld)}
@@ -224,6 +233,7 @@ section:not(.light) .q .who{border-top-color:var(--ld)}
 .bcards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .bcard{border:1px solid var(--ld);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
 .bcard:hover{border-color:var(--dim2)}
+.bcard img.thumb{object-fit:cover;width:100%;display:block;padding:0}
 .bcard .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#20202a,#14141a);display:flex;align-items:center;justify-content:center;font-family:var(--m);font-size:11px;color:var(--dim2);text-transform:uppercase;letter-spacing:.1em}
 .bcard .bc{padding:22px 22px 26px;display:flex;flex-direction:column;flex:1}
 .bcard .cat{font-family:var(--m);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--redt)}
@@ -301,9 +311,11 @@ footer .wrap{padding:clamp(56px,6vw,90px) var(--pad) 40px}
   .has-mega.open .mega{max-height:1200px}
   .has-mega.open > a .mcaret{transform:rotate(180deg)}
   .mega .wrap{padding:0}
-  .mega-in{grid-template-columns:1fr;gap:18px;padding:6px 0 10px}
-  .mega-col .mega-h{border-bottom:none;padding-bottom:6px}
-  .mega-link{padding:9px 0}
+  .mega-in{grid-template-columns:1fr;gap:22px;padding:10px 0 14px}
+  .mega-intro .mega-ih{font-size:18px}
+  .mega-intro p{margin:8px 0 12px}
+  .mega-col .mega-h{border-bottom:none;padding-bottom:6px;margin-bottom:4px}
+  .mega-link{padding:12px 10px;margin:0 -10px}
 }
 
 /* keyboard focus */
