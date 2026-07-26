@@ -43,8 +43,8 @@ DNS is on **Cloudflare** (nameservers already point there for getascent.co; the 
 
 Content (see `CONTENT-GUIDE.md` §5 for details):
 - [x] Real booking link wired (cal.com/jamilahmed/30min, embed + buttons)
-- [ ] Real testimonial quotes in place of "Real quote to add"
-- [ ] 360Partners case-study outcome added
+- [x] Real testimonial quotes live (six LinkedIn recommendations)
+- [x] 360Partners case study + operating-ranges section live
 - [x] Blog: six real posts live with covers (see BLOG-GUIDE.md for publishing)
 - [x] Blog cover images in place (assets/blog/)
 

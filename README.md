@@ -81,8 +81,8 @@ Some copy is **locked** and some is placeholder. Writing style rules (no em-dash
 Every placeholder is clearly marked in the pages; nothing is faked.
 
 1. ~~Booking link~~ — DONE: every "Book a call" opens cal.com/jamilahmed/30min; Contact embeds it inline.
-2. **Testimonials** (`results.html`, `index.html`) — real names are in place, quotes are marked "Real quote to add". Paste the actual LinkedIn recommendations.
-3. **Case study outcome** (`results.html`) — 360Partners outcome is marked "Real outcome to add".
+2. ~~Testimonials~~ — DONE: six real LinkedIn recommendations live on Results, three excerpted on Home.
+3. ~~Case study~~ — DONE: full 360Partners case study live, plus an operating-ranges benchmarks section.
 4. ~~Blog~~ — DONE: six real posts live with Swiss cover art. To publish more, see `docs/BLOG-GUIDE.md`.
 5. **Images** — `.thumb` blocks are labelled placeholders.
 6. **Analytics** — owner's choice, add at deploy time. (OG/social tags, canonical URLs, robots.txt, sitemap.xml and the OG image are done.)
