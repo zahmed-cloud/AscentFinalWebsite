@@ -26,7 +26,9 @@ AscentFinalWebsite/
 ├── industries.html       Industries (who we work with)
 ├── about.html            About (story, founder, philosophy, difference)
 ├── how-we-work.html      How We Work (process, 3 packages, engagement note)
-├── blog.html             Blog index (card grid)
+├── blog.html             Blog index (shows 6 pinned posts)
+├── all-posts.html        Full post archive
+├── posts.json            Post manifest (source of truth for the CMS)
 ├── article-*.html        Published blog posts (6 live)
 ├── article-template.html Template: copy this to write a new post
 ├── contact.html          Contact (booking embed + form)

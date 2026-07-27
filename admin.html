@@ -7,11 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <style>
-  :root{--ink:#161619;--ink2:#0f0f12;--bone:#e9e6dc;--red:#8d1c3d;--redt:#c9536f;--dim:rgba(233,230,220,.6);--ld:rgba(233,230,220,.14);--a:'Archivo',sans-serif;--m:'IBM Plex Mono',monospace;--good:#3fb27f}
+  :root{--ink:#161619;--ink2:#0f0f12;--bone:#e9e6dc;--red:#8d1c3d;--redt:#c9536f;--dim:rgba(233,230,220,.6);--dim2:rgba(233,230,220,.38);--ld:rgba(233,230,220,.14);--a:'Archivo',sans-serif;--m:'IBM Plex Mono',monospace;--good:#3fb27f}
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:var(--a);background:var(--ink);color:var(--bone);height:100vh;display:flex;flex-direction:column;overflow:hidden}
-  /* gate */
-  .gate{position:fixed;inset:0;z-index:20;background:var(--ink);display:flex;align-items:center;justify-content:center}
+  a{color:inherit}
+  .gate{position:fixed;inset:0;z-index:30;background:var(--ink);display:flex;align-items:center;justify-content:center}
   .gatebox{width:340px;text-align:center}
   .gatebox .brand{font-weight:900;font-size:26px;margin-bottom:6px}.gatebox .brand span{color:var(--red)}
   .gatebox p{font-family:var(--m);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:22px}
@@ -19,37 +19,65 @@
   .gatebox input:focus{outline:none;border-color:var(--redt)}
   .gatebox button{width:100%;background:var(--red);color:#fff;border:none;border-radius:3px;font-family:var(--a);font-weight:700;font-size:15px;padding:13px;cursor:pointer}
   .gate .err{color:var(--redt);font-family:var(--m);font-size:12px;min-height:16px;margin-top:8px}
-  /* app */
-  header{padding:15px 24px;border-bottom:1px solid var(--ld);display:flex;align-items:center;justify-content:space-between;flex:none}
+  header{padding:0 24px;border-bottom:1px solid var(--ld);display:flex;align-items:center;justify-content:space-between;flex:none;height:58px}
   header .brand{font-weight:900;font-size:19px}header .brand span{color:var(--red)}
-  header .tag{font-family:var(--m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-  .wrap2{flex:1;display:grid;grid-template-columns:minmax(380px,460px) 1fr;min-height:0}
-  .editor{border-right:1px solid var(--ld);overflow-y:auto;padding:24px}
-  .field{margin-bottom:18px}
+  .tabs{display:flex;gap:4px}
+  .tabs button{font-family:var(--m);font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;color:var(--dim);padding:10px 16px;cursor:pointer;border-bottom:2px solid transparent}
+  .tabs button.on{color:var(--bone);border-bottom-color:var(--red)}
+  .view{flex:1;min-height:0;display:none}
+  .view.on{display:block}
+  /* WRITE */
+  #view-write{display:grid;grid-template-columns:minmax(390px,470px) 1fr;height:100%}
+  .editor{border-right:1px solid var(--ld);overflow-y:auto;padding:22px}
+  .field{margin-bottom:16px}
   label{font-family:var(--m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:7px}
   input,select,textarea{width:100%;background:transparent;border:1px solid var(--ld);border-radius:3px;color:var(--bone);font-family:var(--a);font-size:15px;padding:11px 13px}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--redt)}
-  textarea{min-height:320px;resize:vertical;line-height:1.6;font-size:14.5px}
+  textarea{min-height:270px;resize:vertical;line-height:1.6;font-size:14.5px}
   .hint{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:6px;line-height:1.5}
   .row{display:flex;gap:12px}.row .field{flex:1}
   .toolbar{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}
   .toolbar button{font-family:var(--m);font-size:11px;background:#20202a;border:1px solid var(--ld);color:var(--bone);border-radius:3px;padding:6px 10px;cursor:pointer}
   .toolbar button:hover{border-color:var(--redt)}
+  .cover-row{display:flex;gap:12px;align-items:center}
+  .cover-row .thumb{width:104px;height:65px;border-radius:3px;object-fit:cover;border:1px solid var(--ld);flex:none;background:#20202a}
+  .filebtn{font-family:var(--a);font-weight:600;font-size:13px;border:1px solid var(--ld);border-radius:3px;padding:9px 14px;cursor:pointer;display:inline-block}
+  .filebtn:hover{border-color:var(--redt)}
+  .cover-row .sub{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:6px}
+  .cover-row .sub a{color:var(--redt);cursor:pointer}
   .actions{position:sticky;bottom:0;background:var(--ink);padding:16px 0 4px;border-top:1px solid var(--ld);margin-top:8px}
   .pub{width:100%;background:var(--red);color:#fff;border:none;border-radius:3px;font-family:var(--a);font-weight:700;font-size:15px;padding:15px;cursor:pointer}
   .pub:hover{background:#a3234a}.pub:disabled{opacity:.5;cursor:default}
   .status{font-family:var(--m);font-size:12.5px;line-height:1.5;margin-top:12px;min-height:18px}
-  .status.ok{color:var(--good)}.status.bad{color:var(--redt)}
-  .status a{color:var(--bone)}
-  .prev{overflow-y:auto;background:#000}
+  .status.ok{color:var(--good)}.status.bad{color:var(--redt)}.status a{color:var(--bone)}
+  .prev{overflow-y:auto;background:#000;height:100%}
   .prev iframe{width:100%;height:100%;border:0;display:block;background:var(--ink)}
+  /* MANAGE */
+  #view-manage{overflow-y:auto;height:100%;padding:26px clamp(20px,4vw,48px)}
+  .mgr-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--bone);padding-bottom:14px;margin-bottom:8px}
+  .mgr-head h2{font-family:var(--a);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:26px}
+  .mgr-head .n{font-family:var(--m);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .mgr-note{font-family:var(--m);font-size:12px;color:var(--dim);margin:14px 0 22px;line-height:1.6;max-width:70ch}
+  .prow{display:grid;grid-template-columns:96px 1fr auto;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid var(--ld)}
+  .prow img{width:96px;height:60px;object-fit:cover;border-radius:3px;border:1px solid var(--ld);background:#20202a}
+  .prow .info b{font-size:16px;display:block;line-height:1.2}
+  .prow .info .meta{font-family:var(--m);font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:5px}
+  .prow .info .feat{font-family:var(--m);font-size:10.5px;color:var(--good);letter-spacing:.06em;text-transform:uppercase;margin-left:10px}
+  .prow .ctrl{display:flex;gap:8px}
+  .prow button{font-family:var(--m);font-size:11.5px;letter-spacing:.04em;border-radius:3px;padding:9px 14px;cursor:pointer;border:1px solid var(--ld);background:transparent;color:var(--bone)}
+  .prow button.pinbtn.on{background:var(--red);border-color:var(--red);color:#fff}
+  .prow button.pinbtn:hover{border-color:var(--redt)}
+  .prow button.del{color:var(--redt);border-color:rgba(201,83,111,.4)}
+  .prow button.del:hover{background:var(--redt);color:#fff}
+  .mstatus{font-family:var(--m);font-size:12.5px;margin-top:18px;min-height:18px}
+  .mstatus.ok{color:var(--good)}.mstatus.bad{color:var(--redt)}
   canvas{display:none}
-  @media(max-width:900px){.wrap2{grid-template-columns:1fr;grid-template-rows:1fr 1fr}.editor{border-right:none;border-bottom:1px solid var(--ld)}}
+  @media(max-width:900px){#view-write{grid-template-columns:1fr;grid-template-rows:1fr 1fr}.editor{border-right:none;border-bottom:1px solid var(--ld)}.prow{grid-template-columns:70px 1fr;grid-template-rows:auto auto}.prow .ctrl{grid-column:1/-1}}
 </style></head>
 <body>
   <div class="gate" id="gate"><div class="gatebox">
     <div class="brand">Ascent<span>.</span></div>
-    <p>Private &middot; write &amp; publish</p>
+    <p>Private &middot; write &amp; manage</p>
     <input id="gate-pw" type="password" placeholder="Password" autocomplete="current-password">
     <button id="gate-go">Enter</button>
     <div class="err" id="gate-err"></div>
@@ -57,9 +85,11 @@
 
   <header>
     <span class="brand">Ascent<span>.</span> Write</span>
-    <span class="tag">New post</span>
+    <span class="tabs"><button id="tab-write" class="on">Write</button><button id="tab-manage">Manage posts</button></span>
   </header>
-  <div class="wrap2">
+
+  <!-- WRITE -->
+  <div class="view on" id="view-write">
     <div class="editor">
       <div class="field"><label>Title</label><input id="f-title" placeholder="Booked calls are a number, not a strategy"></div>
       <div class="row">
@@ -67,6 +97,17 @@
         <div class="field"><label>Date</label><input id="f-date"></div>
       </div>
       <div class="field"><label>Excerpt (one line, the thesis)</label><input id="f-exc" placeholder="How to tell whether your outbound is filling the calendar or just filling the report."></div>
+      <div class="field">
+        <label>Cover image</label>
+        <div class="cover-row">
+          <img id="cover-prev" class="thumb" alt="cover">
+          <div>
+            <label for="f-img" class="filebtn">Upload image</label>
+            <input id="f-img" type="file" accept="image/png,image/jpeg,image/webp" style="display:none">
+            <div class="sub" id="cover-sub">Auto cover generated. <a id="use-auto">Use auto cover</a></div>
+          </div>
+        </div>
+      </div>
       <div class="field">
         <label>Body</label>
         <div class="toolbar"><button data-ins="## ">H2 heading</button><button data-ins="> ">Quote</button><button data-ins="- ">List item</button></div>
@@ -79,7 +120,7 @@ Normal paragraphs are just text. Leave a blank line between them.
 > A greater-than line becomes a pull quote.
 
 - A dash line becomes a bullet"></textarea>
-        <div class="hint">blank line = new paragraph &middot; "## " = heading &middot; "&gt; " = quote &middot; "- " = bullet. Aim 600 to 900 words. Draft auto-saves in this browser.</div>
+        <div class="hint">blank line = paragraph &middot; "## " = heading &middot; "&gt; " = quote &middot; "- " = bullet. Preview is live on the right. Draft auto-saves.</div>
       </div>
       <div class="actions">
         <button class="pub" id="publish">Publish to website</button>
@@ -88,24 +129,29 @@ Normal paragraphs are just text. Leave a blank line between them.
     </div>
     <div class="prev"><iframe id="preview"></iframe></div>
   </div>
+
+  <!-- MANAGE -->
+  <div class="view" id="view-manage">
+    <div class="mgr-head"><h2>Your posts</h2><span class="n" id="mgr-count"></span></div>
+    <p class="mgr-note">The blog page shows the 6 pinned posts (newest first). Everything lives on the "all posts" page. Pin the ones you want featured, delete anything you do not want. Changes go live in about a minute.</p>
+    <div id="post-list"></div>
+    <div class="mstatus" id="mstatus"></div>
+  </div>
   <canvas id="cv" width="1600" height="1000"></canvas>
+
 <script>
 const $=id=>document.getElementById(id);
-let PW="";
+let PW="", coverData="", uploaded=false;
 function slugify(t){return t.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'untitled';}
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function mdBody(src){
-  return src.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{
-    const l=b.split('\n').map(x=>x.trim());
-    if(l[0].startsWith('## ')) return '    <h2>'+esc(l[0].slice(3))+'</h2>';
-    if(l.every(x=>x.startsWith('- '))) return '    <ul>\n'+l.map(x=>'      <li>'+esc(x.slice(2))+'</li>').join('\n')+'\n    </ul>';
-    if(l[0].startsWith('> ')) return '    <blockquote>'+esc(l.map(x=>x.replace(/^>\s?/,'')).join(' '))+'</blockquote>';
-    return '    <p>'+esc(l.join(' '))+'</p>';
-  }).join('\n');
-}
-function toISO(d){const m={jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12'};
-  const p=(d||'').toLowerCase().match(/(\d{1,2})\s+([a-z]{3})[a-z]*\s+(\d{4})/);return p?p[3]+'-'+(m[p[2]]||'01')+'-'+p[1].padStart(2,'0'):'2026-01-01';}
-function drawCover(){const c=$('cv'),x=c.getContext('2d'),slug=slugify($('f-title').value),cat=$('f-cat').value;
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function mdBody(src){return src.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{const l=b.split('\n').map(x=>x.trim());
+  if(l[0].startsWith('## '))return '    <h2>'+esc(l[0].slice(3))+'</h2>';
+  if(l.every(x=>x.startsWith('- ')))return '    <ul>\n'+l.map(x=>'      <li>'+esc(x.slice(2))+'</li>').join('\n')+'\n    </ul>';
+  if(l[0].startsWith('> '))return '    <blockquote>'+esc(l.map(x=>x.replace(/^>\s?/,'')).join(' '))+'</blockquote>';
+  return '    <p>'+esc(l.join(' '))+'</p>';}).join('\n');}
+function toISO(d){const m={jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12'};const p=(d||'').toLowerCase().match(/(\d{1,2})\s+([a-z]{3})[a-z]*\s+(\d{4})/);return p?p[3]+'-'+(m[p[2]]||'01')+'-'+p[1].padStart(2,'0'):'2026-01-01';}
+function fields(){const title=$('f-title').value||'Untitled post';return{title,category:$('f-cat').value,date:$('f-date').value,iso:toISO($('f-date').value),excerpt:$('f-exc').value,slug:slugify(title),bodyHTML:mdBody($('f-body').value)};}
+function autoCover(){const c=$('cv'),x=c.getContext('2d'),slug=slugify($('f-title').value),cat=$('f-cat').value;
   x.fillStyle='#161619';x.fillRect(0,0,1600,1000);
   x.strokeStyle='rgba(233,230,220,.05)';x.lineWidth=2;for(let i=1;i<8;i++){x.beginPath();x.moveTo(i*200,0);x.lineTo(i*200,1000);x.stroke();}
   x.fillStyle='#8d1c3d';x.fillRect(80,80,40,40);
@@ -116,45 +162,74 @@ function drawCover(){const c=$('cv'),x=c.getContext('2d'),slug=slugify($('f-titl
   x.fillStyle='#8d1c3d';x.fillRect(1526,908,32,32);x.textAlign='left';
   return c.toDataURL('image/png');
 }
-function fields(){const title=$('f-title').value||'Untitled post';return{title,category:$('f-cat').value,date:$('f-date').value,iso:toISO($('f-date').value),excerpt:$('f-exc').value,slug:slugify(title),bodyHTML:mdBody($('f-body').value)};}
+function refreshCover(){if(!uploaded){coverData=autoCover();$('cover-prev').src=coverData;}}
+function normalizeUpload(file){const img=new Image();const url=URL.createObjectURL(file);img.onload=()=>{
+  const c=$('cv'),x=c.getContext('2d');x.clearRect(0,0,1600,1000);x.fillStyle='#161619';x.fillRect(0,0,1600,1000);
+  const s=Math.max(1600/img.width,1000/img.height),w=img.width*s,h=img.height*s;
+  x.drawImage(img,(1600-w)/2,(1000-h)/2,w,h);coverData=c.toDataURL('image/png');uploaded=true;
+  $('cover-prev').src=coverData;$('cover-sub').innerHTML='Your image, cropped to 16:10. <a id="use-auto">Use auto cover</a>';bindAuto();URL.revokeObjectURL(url);preview();};
+  img.src=url;}
+function bindAuto(){const a=$('use-auto');if(a)a.onclick=()=>{uploaded=false;$('f-img').value='';$('cover-sub').innerHTML='Auto cover generated. <a id="use-auto">Use auto cover</a>';bindAuto();refreshCover();preview();};}
 function preview(){const f=fields();
-  const html=`<!doctype html><html><head><base href="${location.href.replace(/[^/]*$/,'')}"><link rel="stylesheet" href="css/styles.css"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></head><body>
+  const base=location.href.replace(/[^/]*$/,'');
+  const html=`<!doctype html><html><head><base href="${base}"><link rel="stylesheet" href="css/styles.css"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></head><body>
   <main><section class="phero"><div class="wrap"><div class="top"><span class="ey"><span class="sq"></span>&nbsp; ${esc(f.category.toUpperCase())}</span><span class="ey">Est. 2022 — USA / UK / UAE / AU / EU</span></div>
   <h1>${esc(f.title)}</h1><p class="mono" style="font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:22px">By Jamil Ahmed &middot; ${esc(f.category)} &middot; ${esc(f.date)}</p></div></section>
-  <section><div class="wrap"><article class="prose" style="margin-top:20px">${f.bodyHTML}</article></div></section></main></body></html>`;
-  $('preview').srcdoc=html;
-}
-// draft persistence
+  <section><div class="wrap">${coverData?`<img src="${coverData}" style="width:100%;height:auto;border-radius:3px;display:block">`:''}<article class="prose" style="margin-top:30px">${f.bodyHTML}</article></div></section></main></body></html>`;
+  $('preview').srcdoc=html;}
 function save(){localStorage.setItem('ascent-draft',JSON.stringify({t:$('f-title').value,c:$('f-cat').value,d:$('f-date').value,e:$('f-exc').value,b:$('f-body').value}));}
 function restore(){try{const x=JSON.parse(localStorage.getItem('ascent-draft')||'{}');if(x.t)$('f-title').value=x.t;if(x.c)$('f-cat').value=x.c;if(x.e)$('f-exc').value=x.e;if(x.b)$('f-body').value=x.b;if(x.d)$('f-date').value=x.d;}catch(e){}}
-['f-title','f-cat','f-date','f-exc','f-body'].forEach(id=>$(id).addEventListener('input',()=>{preview();save();}));
+['f-title','f-cat','f-date','f-exc','f-body'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='f-title'||id==='f-cat')refreshCover();preview();save();}));
 document.querySelectorAll('.toolbar button').forEach(bn=>bn.addEventListener('click',()=>{const ta=$('f-body'),ins=bn.dataset.ins,s=ta.selectionStart;ta.value=ta.value.slice(0,s)+ins+ta.value.slice(s);ta.focus();ta.selectionStart=ta.selectionEnd=s+ins.length;preview();save();}));
+$('f-img').addEventListener('change',e=>{if(e.target.files[0])normalizeUpload(e.target.files[0]);});
+bindAuto();
+
+// tabs
+function tab(which){$('tab-write').classList.toggle('on',which==='write');$('tab-manage').classList.toggle('on',which==='manage');
+  $('view-write').classList.toggle('on',which==='write');$('view-manage').classList.toggle('on',which==='manage');
+  if(which==='manage')loadPosts();}
+$('tab-write').onclick=()=>tab('write');$('tab-manage').onclick=()=>tab('manage');
 
 // gate
-function openGate(){$('gate-pw').focus();}
 $('gate-go').addEventListener('click',()=>{const v=$('gate-pw').value;if(!v){$('gate-err').textContent='Enter your password.';return;}PW=v;$('gate').style.display='none';});
 $('gate-pw').addEventListener('keydown',e=>{if(e.key==='Enter')$('gate-go').click();});
 
 // publish
-$('publish').addEventListener('click',async()=>{
-  const f=fields();const st=$('status');
+$('publish').addEventListener('click',async()=>{const f=fields(),st=$('status');
   if(!f.title||f.title==='Untitled post'){st.className='status bad';st.textContent='Add a title first.';return;}
   if(!$('f-body').value.trim()){st.className='status bad';st.textContent='Write something first.';return;}
-  $('publish').disabled=true;st.className='status';st.textContent='Publishing… this takes about a minute to go live.';
-  try{
-    const body={password:PW,...f,coverBase64:drawCover()};
-    const r=await fetch('/api/publish',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-    const j=await r.json();
-    if(!r.ok){throw new Error(j.error||('Error '+r.status));}
-    st.className='status ok';st.innerHTML='Published. Live in ~1 min at <a href="'+j.url+'" target="_blank" rel="noopener">'+j.url.replace('https://','')+'</a>. You can write another.';
-    localStorage.removeItem('ascent-draft');
-    ['f-title','f-exc','f-body'].forEach(id=>$(id).value='');preview();
+  $('publish').disabled=true;st.className='status';st.textContent='Publishing… live in about a minute.';
+  try{const r=await fetch('/api/publish',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:PW,...f,coverBase64:coverData})});
+    const j=await r.json();if(!r.ok)throw new Error(j.error||('Error '+r.status));
+    st.className='status ok';st.innerHTML='Published. Live in ~1 min at <a href="'+j.url+'" target="_blank" rel="noopener">'+j.url.replace('https://','')+'</a>.';
+    localStorage.removeItem('ascent-draft');['f-title','f-exc','f-body'].forEach(id=>$(id).value='');uploaded=false;$('f-img').value='';refreshCover();preview();
   }catch(e){st.className='status bad';st.textContent=String(e.message||e);}
-  $('publish').disabled=false;
-});
+  $('publish').disabled=false;});
+
+// manage
+function featuredSlugs(posts){const pin=posts.filter(p=>p.pinned),unp=posts.filter(p=>!p.pinned);return (pin.concat(unp)).slice(0,6).map(p=>p.slug);}
+async function loadPosts(){const list=$('post-list');list.innerHTML='<p style="font-family:var(--m);color:var(--dim);font-size:13px">Loading…</p>';
+  try{const r=await fetch('posts.json?cb='+Date.now());const j=await r.json();renderPosts(j.posts||[]);}catch(e){list.innerHTML='<p style="color:var(--redt)">Could not load posts.json</p>';}}
+function renderPosts(posts){const feat=featuredSlugs(posts);$('mgr-count').textContent=posts.length+' posts · '+feat.length+' on blog';
+  const list=$('post-list');list.innerHTML='';
+  posts.forEach(p=>{const row=document.createElement('div');row.className='prow';
+    const isFeat=feat.includes(p.slug);
+    row.innerHTML=`<img src="assets/blog/${p.slug}.png?cb=${Date.now()}" alt="">
+      <div class="info"><b>${esc(p.title)}${isFeat?'<span class="feat">On blog</span>':''}</b><div class="meta">${esc(p.category)} &middot; ${esc(p.date)}</div></div>
+      <div class="ctrl"><button class="pinbtn ${p.pinned?'on':''}" data-slug="${p.slug}" data-pinned="${p.pinned?1:0}">${p.pinned?'Pinned':'Pin'}</button>
+      <button class="del" data-slug="${p.slug}" data-title="${esc(p.title)}">Delete</button></div>`;
+    list.appendChild(row);});
+  list.querySelectorAll('.pinbtn').forEach(b=>b.onclick=()=>act(b.dataset.pinned==='1'?'unpin':'pin',b.dataset.slug));
+  list.querySelectorAll('.del').forEach(b=>b.onclick=()=>{if(confirm('Delete "'+b.dataset.title+'"? This removes the post from your site.'))act('delete',b.dataset.slug);});
+}
+async function act(action,slug){const st=$('mstatus');st.className='mstatus';st.textContent='Working…';
+  try{const r=await fetch('/api/manage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:PW,action,slug})});
+    const j=await r.json();if(!r.ok)throw new Error(j.error||('Error '+r.status));
+    renderPosts(j.posts||[]);st.className='mstatus ok';st.textContent=(action==='delete'?'Deleted':'Updated')+'. Live on the site in about a minute.';
+  }catch(e){st.className='mstatus bad';st.textContent=String(e.message||e);}}
 
 // init
 (function(){const d=new Date(),mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];$('f-date').value=d.getDate()+' '+mo[d.getMonth()]+' '+d.getFullYear();})();
-restore();openGate();document.fonts.ready.then(preview);preview();
+restore();$('gate-pw').focus();document.fonts.ready.then(()=>{refreshCover();preview();});refreshCover();preview();
 </script>
 </body></html>

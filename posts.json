@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "slug": "cold-email-opener",
+      "title": "The cold email opener that earns the next line",
+      "category": "Outbound",
+      "date": "12 Jan 2026",
+      "iso": "2026-01-12",
+      "excerpt": "Your first sentence has two jobs: prove you did the work, and cost the reader nothing.",
+      "alt": "Abstract type bars, Swiss composition",
+      "cover": "assets/blog/cold-email-opener.png",
+      "pinned": true
+    },
+    {
+      "slug": "post-like-an-operator",
+      "title": "Post like an operator, not a thought leader",
+      "category": "Founder Brand",
+      "date": "03 Feb 2026",
+      "iso": "2026-02-03",
+      "excerpt": "The founder content that actually moves pipeline reads like a working note, not a keynote.",
+      "alt": "Grid of squares with one filled, Swiss composition",
+      "cover": "assets/blog/post-like-an-operator.png",
+      "pinned": true
+    },
+    {
+      "slug": "pick-one-icp",
+      "title": "Pick one ICP before you touch a single channel",
+      "category": "GTM Strategy",
+      "date": "24 Feb 2026",
+      "iso": "2026-02-24",
+      "excerpt": "Most go-to-market plans stall because they are trying to sell to everyone at once.",
+      "alt": "Concentric target rings, Swiss composition",
+      "cover": "assets/blog/pick-one-icp.png",
+      "pinned": true
+    },
+    {
+      "slug": "paid-ads-louder",
+      "title": "Paid ads make your GTM louder, not better",
+      "category": "Paid",
+      "date": "17 Mar 2026",
+      "iso": "2026-03-17",
+      "excerpt": "Spend amplifies whatever is already true about your funnel, including the broken parts.",
+      "alt": "Amplifying bars, Swiss composition",
+      "cover": "assets/blog/paid-ads-louder.png",
+      "pinned": true
+    },
+    {
+      "slug": "crm-you-can-trust",
+      "title": "Build the CRM you can actually trust",
+      "category": "Ops",
+      "date": "09 Apr 2026",
+      "iso": "2026-04-09",
+      "excerpt": "A dashboard is only as honest as the fields your team fills in without being asked.",
+      "alt": "Ledger rows with one highlighted, Swiss composition",
+      "cover": "assets/blog/crm-you-can-trust.png",
+      "pinned": true
+    },
+    {
+      "slug": "booked-calls",
+      "title": "Booked calls are a number, not a strategy",
+      "category": "Outbound",
+      "date": "28 May 2026",
+      "iso": "2026-05-28",
+      "excerpt": "How to tell whether your outbound is filling the calendar or just filling the report.",
+      "alt": "Calendar grid with filled cells, Swiss composition",
+      "cover": "assets/blog/booked-calls.png",
+      "pinned": true
+    }
+  ]
+}

@@ -35,19 +35,25 @@ Vercel → your project → **Settings → Environment Variables**. Add these fo
 
 That is it. The token stays on the server and is never sent to your browser.
 
-## Writing a post (every time, ~5 minutes)
+## Using it (getascent.co/admin, after login)
 
-1. Go to **getascent.co/admin**, enter your password.
-2. Fill in Title, Category, Date, Excerpt.
-3. Write the body. Four simple rules (buttons insert them):
-   - blank line = new paragraph
-   - `## ` = a heading
-   - `> ` = a pull quote
-   - `- ` = a bullet
-4. Watch the live preview on the right.
-5. Click **Publish to website**. Done. Live in about a minute, with an on-brand cover image generated for you and the blog index updated automatically.
+Two tabs at the top.
 
-Your draft auto-saves in the browser as you type, so you will not lose work.
+### Write
+1. Fill in Title, Category, Date, Excerpt.
+2. **Cover image**: an on-brand cover is generated automatically. Or click **Upload image** to use your own (it is cropped to 16:10 for you). "Use auto cover" reverts.
+3. Write the body. Four rules (buttons insert them): blank line = paragraph, `## ` = heading, `> ` = pull quote, `- ` = bullet.
+4. Watch the live preview on the right, exactly as it will look.
+5. Click **Publish to website**. Live in about a minute. Your draft auto-saves as you type.
+
+### Manage posts
+- Lists every post, newest first, showing which are **On blog**.
+- The blog page always shows the **6 pinned** posts; everything else lives on the **All posts** page (a "Read all posts" link appears on the blog once you have more than 6).
+- **Pin / Unpin** to choose the six featured on the blog page.
+- **Delete** removes the post, its cover, and its listing (with a confirm).
+- Changes go live in about a minute.
+
+Nothing is ever lost by accident, and the whole site stays organized from this one screen.
 
 ## Notes
 - The admin page and the function are hidden from search engines (noindex + robots disallow).
