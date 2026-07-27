@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /blog-studio.html
+Disallow: /api/
 
 Sitemap: https://getascent.co/sitemap.xml

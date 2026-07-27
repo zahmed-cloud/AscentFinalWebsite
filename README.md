@@ -94,7 +94,7 @@ See `docs/DEPLOYMENT.md` for the full GitHub → Vercel → `getascent.co` walkt
 ## House rules for future changes
 
 - Match the existing design system; don't invent new colours, fonts, or component styles ad hoc.
-- No frameworks, no build tooling, no npm. The zero-dependency setup is deliberate.
+- No frameworks, no build tooling, no npm. The one server-side piece is `api/publish.js` (a Vercel function for the CMS); everything else is static.
 - Keep pages accessible: alt text on images, labels on form fields, visible focus states (already wired).
 - Test at mobile width (≤860px) after any nav or layout change.
 - Commit messages: short imperative summary + a body explaining why.

@@ -54,6 +54,7 @@ Technical:
 - [x] `robots.txt` + `sitemap.xml`
 - [ ] Add analytics (owner's choice; keep it one lightweight script)
 - [ ] Contact form backend: point the form `action` at Formspree/serverless, or remove the form and keep booking + email
+- [ ] Blog CMS: set ADMIN_PASSWORD, GITHUB_TOKEN, GITHUB_REPO env vars in Vercel (see CMS-SETUP.md) so /admin can publish
 - [ ] Click through every page on the live preview URL, desktop + phone
 - [ ] Run the link check (below) one last time
 
