@@ -12,7 +12,7 @@
    ============================================================ */
 :root{
   --ink:#161619;--ink2:#0f0f12;--bone:#e9e6dc;--red:#8d1c3d;
-  --dim:rgba(233,230,220,.60);--dim2:rgba(233,230,220,.40);
+  --dim:rgba(233,230,220,.60);--dim2:rgba(233,230,220,.55);
   --idim:#55534a;--idim2:#7d7a6e;
   --ld:rgba(233,230,220,.14);--ll:rgba(22,22,25,.13);
   --redt:#c9536f;
@@ -239,7 +239,7 @@ section:not(.light) .q .who{border-top-color:var(--ld)}
 .bcard .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#20202a,#14141a);display:flex;align-items:center;justify-content:center;font-family:var(--m);font-size:11px;color:var(--dim2);text-transform:uppercase;letter-spacing:.1em}
 .bcard .bc{padding:22px 22px 26px;display:flex;flex-direction:column;flex:1}
 .bcard .cat{font-family:var(--m);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--redt)}
-.bcard h3{font-size:20px;margin:12px 0 10px;line-height:1.05;text-transform:none;letter-spacing:-.01em}
+.bcard h2,.bcard h3{font-size:20px;margin:12px 0 10px;line-height:1.05;text-transform:none;letter-spacing:-.01em}
 .bcard p{font-size:14.5px;line-height:1.5;color:var(--dim);margin-bottom:auto}
 .bcard .meta{font-family:var(--m);font-size:11px;color:var(--idim2);margin-top:18px;text-transform:uppercase;letter-spacing:.06em}
 
@@ -303,7 +303,8 @@ footer .wrap{padding:clamp(56px,6vw,90px) var(--pad) 40px}
 @media(max-width:860px){
   .nl,.navr .git{display:none}
   .burger{display:inline-block}
-  .nl.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid var(--ld);padding:8px var(--pad) 16px}
+  .nl.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid var(--ld);padding:8px var(--pad) 16px;
+    max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
   .nl.open > a{padding:12px 0;border-bottom:1px solid var(--ld)}
   /* mega becomes a tap-to-expand accordion inside the mobile menu */
   .nl.open .has-mega{display:block;position:static}
@@ -320,8 +321,12 @@ footer .wrap{padding:clamp(56px,6vw,90px) var(--pad) 40px}
   .mega-link{padding:12px 10px;margin:0 -10px}
 }
 
+/* the mobile mega accordion re-declares .mega's transition above, so re-disable it for reduced motion */
+@media(prefers-reduced-motion:reduce){.mega{transition:none}}
+
 /* keyboard focus */
 a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{outline:2px solid var(--redt);outline-offset:2px}
 
 /* CASE FILES (research-backed case study format) */
 .cs{padding:clamp(44px,5vw,72px) 0;border-bottom:1px solid var(--ld)}

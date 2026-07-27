@@ -50,6 +50,16 @@
   if (mega) {
     var trigger = mega.querySelector(':scope > a');
     if (trigger) {
+      // keep aria-expanded in sync with the CSS :hover / :focus-within open states
+      var setExpanded = function (v) { trigger.setAttribute('aria-expanded', v ? 'true' : 'false'); };
+      mega.addEventListener('mouseenter', function () { setExpanded(true); });
+      mega.addEventListener('mouseleave', function () {
+        if (!mega.classList.contains('open')) { setExpanded(false); }
+      });
+      mega.addEventListener('focusin', function () { setExpanded(true); });
+      mega.addEventListener('focusout', function (e) {
+        if (!mega.contains(e.relatedTarget) && !mega.classList.contains('open')) { setExpanded(false); }
+      });
       trigger.addEventListener('click', function (e) {
         if (window.matchMedia('(max-width: 860px)').matches && !mega.classList.contains('open')) {
           e.preventDefault();

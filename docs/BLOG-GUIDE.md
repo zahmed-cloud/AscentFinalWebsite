@@ -34,6 +34,8 @@ Update these lines with your title, one-line summary, and the new filename:
 - `<meta name="description" content="One-line summary.">`
 - `<link rel="canonical" href="https://getascent.co/article-my-post-title.html">`
 - The `og:title`, `og:description`, `og:url`, `twitter:title`, `twitter:description` lines (same values)
+- `og:type` stays `article`; update `article:published_time` to your publish date
+- Add/adjust the JSON-LD BlogPosting block (copy one from a published article and update headline, dates, image, url)
 - `og:image` + `twitter:image` → your cover image URL (step 4)
 
 ### 3. Fill in the page
