@@ -204,6 +204,8 @@ section:not(.light) .q{border-color:var(--ld)}
 .q .who{display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid var(--ll)}
 section:not(.light) .q .who{border-top-color:var(--ld)}
 .q .av{width:40px;height:40px;border-radius:50%;background:#cfccc0;flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--a);font-weight:900;color:var(--ink);font-size:15px}
+.q .av{overflow:hidden}
+.q .av img{width:100%;height:100%;object-fit:cover;display:block}
 .q .who b{font-size:14.5px;display:block}
 .q .who span{font-family:var(--m);font-size:11.5px;color:var(--idim2)}
 
