@@ -46,7 +46,7 @@ h1,h2,h3,h4{font-family:var(--a);font-weight:900;text-transform:uppercase;letter
 
 /* ---------- NAV ---------- */
 nav{position:sticky;top:0;z-index:50;background:rgba(22,22,25,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--ld)}
-.navin{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.navin{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
 .brand{font-family:var(--a);font-weight:900;font-size:23px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
 .brand .sq{width:13px;height:13px}
 .nl{display:flex;gap:28px}
@@ -173,7 +173,7 @@ section .wrap{padding:clamp(60px,7.5vw,116px) var(--pad)}
 .deliv-lbl{font-family:var(--m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--idim2);margin-bottom:8px}
 .deliv{list-style:none}
 .deliv li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--ld);font-size:15px;color:var(--dim)}
-.deliv li::before{content:"—";color:var(--redt);flex:none}
+.deliv li::before{content:"";width:7px;height:7px;background:var(--redt);flex:none;margin-top:.5em}
 
 /* PACKAGES */
 .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -186,8 +186,8 @@ section .wrap{padding:clamp(60px,7.5vw,116px) var(--pad)}
 .light .pack .lnk{color:var(--red)}
 .pack ul{list-style:none;margin:14px 0 auto}
 .pack ul li{font-size:14px;color:var(--dim);padding:7px 0;border-top:1px solid var(--ld);display:flex;gap:10px}
-.pack ul li::before{content:"—";color:var(--redt)}
-.light .pack ul li::before{color:var(--red)}
+.pack ul li::before{content:"";width:6px;height:6px;background:var(--redt);flex:none;margin-top:.5em}
+.light .pack ul li::before{background:var(--red)}
 /* packages on light sections (dark-dim text is invisible on bone) */
 .light .pack{border-color:var(--ll)}
 .light .pack:hover{border-color:#8a857a}
@@ -306,19 +306,12 @@ footer .wrap{padding:clamp(56px,6vw,90px) var(--pad) 40px}
   .nl.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid var(--ld);padding:8px var(--pad) 16px;
     max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
   .nl.open > a{padding:12px 0;border-bottom:1px solid var(--ld)}
-  /* mega becomes a tap-to-expand accordion inside the mobile menu */
+  /* mobile: Services is a plain link straight to the services page */
   .nl.open .has-mega{display:block;position:static}
-  .nl.open .has-mega > a{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--ld)}
-  .mega{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;
-    max-height:0;overflow:hidden;transition:max-height .3s ease}
-  .has-mega.open .mega{max-height:1200px}
-  .has-mega.open > a .mcaret{transform:rotate(180deg)}
-  .mega .wrap{padding:0}
-  .mega-in{grid-template-columns:1fr;gap:22px;padding:10px 0 14px}
-  .mega-intro .mega-ih{font-size:18px}
-  .mega-intro p{margin:8px 0 12px}
-  .mega-col .mega-h{border-bottom:none;padding-bottom:6px;margin-bottom:4px}
-  .mega-link{padding:12px 10px;margin:0 -10px}
+  .nl.open .has-mega > a{display:flex;align-items:center;padding:12px 0;border-bottom:1px solid var(--ld)}
+  .mega{display:none}
+  .has-mega > a .mcaret{display:none}
+  .nl.open .nl-contact{display:block}
 }
 
 /* the mobile mega accordion re-declares .mega's transition above, so re-disable it for reduced motion */
@@ -356,3 +349,14 @@ a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offs
 .mini .mq{font-family:var(--a);font-weight:600;font-size:14.5px;color:var(--bone);margin-top:18px;
   padding-top:14px;border-top:1px solid var(--ld)}
 @media(max-width:960px){.cs-grid,.csmini{grid-template-columns:1fr;gap:26px}}
+
+/* small-phone nav compaction */
+.nl-contact{display:none}
+@media(max-width:480px){
+  .brand{font-size:20px}
+  .brand .sq{width:11px;height:11px}
+  .navr{gap:10px}
+  .navr .btn.red{padding:10px 14px;font-size:12.5px;gap:7px}
+  .navr .btn.red .arrow{display:none}
+  .burger{padding:7px 10px;font-size:11px}
+}

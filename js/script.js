@@ -44,29 +44,6 @@
     });
   }
 
-  // Services mega-menu: desktop hover is handled in CSS (with a 150ms close delay).
-  // On mobile: first tap expands the accordion, second tap follows the link to services.html.
-  var mega = document.querySelector('.has-mega');
-  if (mega) {
-    var trigger = mega.querySelector(':scope > a');
-    if (trigger) {
-      // keep aria-expanded in sync with the CSS :hover / :focus-within open states
-      var setExpanded = function (v) { trigger.setAttribute('aria-expanded', v ? 'true' : 'false'); };
-      mega.addEventListener('mouseenter', function () { setExpanded(true); });
-      mega.addEventListener('mouseleave', function () {
-        if (!mega.classList.contains('open')) { setExpanded(false); }
-      });
-      mega.addEventListener('focusin', function () { setExpanded(true); });
-      mega.addEventListener('focusout', function (e) {
-        if (!mega.contains(e.relatedTarget) && !mega.classList.contains('open')) { setExpanded(false); }
-      });
-      trigger.addEventListener('click', function (e) {
-        if (window.matchMedia('(max-width: 860px)').matches && !mega.classList.contains('open')) {
-          e.preventDefault();
-          mega.classList.add('open');
-          trigger.setAttribute('aria-expanded', 'true');
-        }
-      });
-    }
-  }
+  // Services mega-menu: desktop hover/focus handled in CSS; on mobile the
+  // mega is hidden and Services is a plain link to services.html.
 })();
