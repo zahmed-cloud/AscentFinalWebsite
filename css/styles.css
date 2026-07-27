@@ -235,7 +235,7 @@ section:not(.light) .q .who{border-top-color:var(--ld)}
 .bcards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .bcard{border:1px solid var(--ld);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
 .bcard:hover{border-color:var(--dim2)}
-.bcard img.thumb{object-fit:cover;width:100%;display:block;padding:0}
+.bcard img.thumb{object-fit:cover;width:100%;height:auto;aspect-ratio:16/10;display:block;padding:0}
 .bcard .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#20202a,#14141a);display:flex;align-items:center;justify-content:center;font-family:var(--m);font-size:11px;color:var(--dim2);text-transform:uppercase;letter-spacing:.1em}
 .bcard .bc{padding:22px 22px 26px;display:flex;flex-direction:column;flex:1}
 .bcard .cat{font-family:var(--m);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--redt)}

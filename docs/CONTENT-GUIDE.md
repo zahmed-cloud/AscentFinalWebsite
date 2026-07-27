@@ -29,7 +29,7 @@ Plain, confident, operator-to-operator, lightly Aussie-inflected. Short sentence
 - CTA band heading: **Let's get your pipeline moving.** on every page EXCEPT Services, which deliberately uses **Not sure where to start?**
 - The six service names: GTM Strategy & Foundation · Outbound & Pipeline · Founder LinkedIn Ghostwriting · Paid Ads · Website, Landing Pages & CRO · Marketing Ops & Automation
 - The three packages, all equal weight (no "most popular"): GTM Strategy & Foundation (Start here) · Pipeline & Authority (Core retainer) · Full Growth Partner (Everything)
-- Founder block facts (About): Jamil Ahmed, **Founder & Growth Partner, Ascent**; leads a small focused team; no account managers between client and work; "Bloody good at turning meh businesses into hell yeah"; coverage USA / UK / UAE / Australia / Europe; operates globally from Dhaka with roots in Sydney. LinkedIn icon links to `linkedin.com/in/getascent`.
+- Founder block facts (About): Jamil Ahmed, **Founder & Growth Partner, Ascent**; leads a small focused team; no account managers between client and work; coverage USA / UK / UAE / Australia / Europe; operates globally from Dhaka with roots in Sydney. LinkedIn icon links to `linkedin.com/in/getascent`.
 
 ## 4. Page content map
 

@@ -61,7 +61,7 @@ ${NAV}
 </div></section>
 
 <section><div class="wrap">
-  <img src="assets/blog/${p.slug}.png" alt="${esc(p.title)}" width="1600" height="1000" style="width:100%;border-radius:3px;display:block" data-r>
+  <img src="assets/blog/${p.slug}.png" alt="${esc(p.title)}" width="1600" height="1000" style="width:100%;height:auto;border-radius:3px;display:block" data-r>
   <article class="prose" data-r style="margin-top:44px">
 ${p.bodyHTML}
   </article>
