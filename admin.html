@@ -27,7 +27,7 @@
   .view{flex:1;min-height:0;display:none}
   .view.on{display:block}
   /* WRITE */
-  #view-write{display:grid;grid-template-columns:minmax(390px,470px) 1fr;height:100%}
+  #view-write.on{display:grid;grid-template-columns:minmax(390px,470px) 1fr;height:100%}
   .editor{border-right:1px solid var(--ld);overflow-y:auto;padding:22px}
   .field{margin-bottom:16px}
   label{font-family:var(--m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:7px}
@@ -69,6 +69,10 @@
   .prow button.pinbtn:hover{border-color:var(--redt)}
   .prow button.del{color:var(--redt);border-color:rgba(201,83,111,.4)}
   .prow button.del:hover{background:var(--redt);color:#fff}
+  .pgroup{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--m);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--redt);border-bottom:1px solid var(--ld);padding:26px 0 10px;margin-top:6px}
+  .pgroup .c{color:var(--dim)}
+  .pempty{font-family:var(--m);font-size:12px;color:var(--dim);padding:14px 0}
+  .prow button.editb:hover{border-color:var(--redt)}
   .mstatus{font-family:var(--m);font-size:12.5px;margin-top:18px;min-height:18px}
   .mstatus.ok{color:var(--good)}.mstatus.bad{color:var(--redt)}
   canvas{display:none}
@@ -133,7 +137,7 @@ Normal paragraphs are just text. Leave a blank line between them.
   <!-- MANAGE -->
   <div class="view" id="view-manage">
     <div class="mgr-head"><h2>Your posts</h2><span class="n" id="mgr-count"></span></div>
-    <p class="mgr-note">The blog page shows the 6 pinned posts (newest first). Everything lives on the "all posts" page. Pin the ones you want featured, delete anything you do not want. Changes go live in about a minute.</p>
+    <p class="mgr-note">The blog page shows your pinned posts, newest first, up to 6. Pin the ones you want featured. Everything, pinned or not, is kept on the All posts page. Edit or delete anything here. Changes go live in about a minute.</p>
     <div id="post-list"></div>
     <div class="mstatus" id="mstatus"></div>
   </div>
@@ -141,7 +145,7 @@ Normal paragraphs are just text. Leave a blank line between them.
 
 <script>
 const $=id=>document.getElementById(id);
-let PW="", coverData="", uploaded=false;
+let PW="", coverData="", uploaded=false, POSTS=[];
 function slugify(t){return t.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'untitled';}
 function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function mdBody(src){return src.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{const l=b.split('\n').map(x=>x.trim());
@@ -207,26 +211,45 @@ $('publish').addEventListener('click',async()=>{const f=fields(),st=$('status');
   $('publish').disabled=false;});
 
 // manage
-function featuredSlugs(posts){const pin=posts.filter(p=>p.pinned),unp=posts.filter(p=>!p.pinned);return (pin.concat(unp)).slice(0,6).map(p=>p.slug);}
-async function loadPosts(){const list=$('post-list');list.innerHTML='<p style="font-family:var(--m);color:var(--dim);font-size:13px">Loading…</p>';
-  try{const r=await fetch('posts.json?cb='+Date.now());const j=await r.json();renderPosts(j.posts||[]);}catch(e){list.innerHTML='<p style="color:var(--redt)">Could not load posts.json</p>';}}
-function renderPosts(posts){const feat=featuredSlugs(posts);$('mgr-count').textContent=posts.length+' posts · '+feat.length+' on blog';
+function featuredSlugs(posts){return posts.filter(p=>p.pinned).slice(0,6).map(p=>p.slug);}
+async function loadPosts(){const list=$('post-list');list.innerHTML='<p class="pempty">Loading your posts…</p>';
+  try{const r=await fetch('posts.json?cb='+Date.now());const j=await r.json();POSTS=j.posts||[];renderPosts(POSTS);}catch(e){list.innerHTML='<p class="pempty" style="color:var(--redt)">Could not load posts. This page works once deployed.</p>';}}
+function rowEl(p){const row=document.createElement('div');row.className='prow';
+  row.innerHTML='<img src="assets/blog/'+p.slug+'.png?cb='+Date.now()+'" alt="">'+
+    '<div class="info"><b>'+esc(p.title)+'</b><div class="meta">'+esc(p.category)+' &middot; '+esc(p.date)+'</div></div>'+
+    '<div class="ctrl"><button class="pinbtn '+(p.pinned?'on':'')+'">'+(p.pinned?'Unpin':'Pin to blog')+'</button>'+
+    '<button class="editb">Edit</button><button class="del">Delete</button></div>';
+  row.querySelector('.pinbtn').onclick=()=>act(p.pinned?'unpin':'pin',p.slug);
+  row.querySelector('.editb').onclick=()=>editPost(p.slug);
+  row.querySelector('.del').onclick=()=>{if(confirm('Delete "'+p.title+'"? This removes it from your site for good.'))act('delete',p.slug);};
+  return row;}
+function renderPosts(posts){POSTS=posts;const feat=featuredSlugs(posts);
+  $('mgr-count').textContent=posts.length+' posts · '+feat.length+' on the blog';
+  const onblog=posts.filter(p=>feat.includes(p.slug)), archive=posts.filter(p=>!feat.includes(p.slug));
   const list=$('post-list');list.innerHTML='';
-  posts.forEach(p=>{const row=document.createElement('div');row.className='prow';
-    const isFeat=feat.includes(p.slug);
-    row.innerHTML=`<img src="assets/blog/${p.slug}.png?cb=${Date.now()}" alt="">
-      <div class="info"><b>${esc(p.title)}${isFeat?'<span class="feat">On blog</span>':''}</b><div class="meta">${esc(p.category)} &middot; ${esc(p.date)}</div></div>
-      <div class="ctrl"><button class="pinbtn ${p.pinned?'on':''}" data-slug="${p.slug}" data-pinned="${p.pinned?1:0}">${p.pinned?'Pinned':'Pin'}</button>
-      <button class="del" data-slug="${p.slug}" data-title="${esc(p.title)}">Delete</button></div>`;
-    list.appendChild(row);});
-  list.querySelectorAll('.pinbtn').forEach(b=>b.onclick=()=>act(b.dataset.pinned==='1'?'unpin':'pin',b.dataset.slug));
-  list.querySelectorAll('.del').forEach(b=>b.onclick=()=>{if(confirm('Delete "'+b.dataset.title+'"? This removes the post from your site.'))act('delete',b.dataset.slug);});
-}
+  function group(title,arr,empty){const h=document.createElement('div');h.className='pgroup';h.innerHTML='<span>'+title+'</span><span class="c">'+arr.length+'</span>';list.appendChild(h);
+    if(!arr.length){const e=document.createElement('p');e.className='pempty';e.textContent=empty;list.appendChild(e);return;}
+    arr.forEach(p=>list.appendChild(rowEl(p)));}
+  group('On the blog',onblog,'Nothing pinned yet. Pin a post to feature it on the blog page.');
+  group('Archive · on the All posts page only',archive,'Nothing here. Every post is on the blog.');}
 async function act(action,slug){const st=$('mstatus');st.className='mstatus';st.textContent='Working…';
   try{const r=await fetch('/api/manage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:PW,action,slug})});
     const j=await r.json();if(!r.ok)throw new Error(j.error||('Error '+r.status));
-    renderPosts(j.posts||[]);st.className='mstatus ok';st.textContent=(action==='delete'?'Deleted':'Updated')+'. Live on the site in about a minute.';
+    renderPosts(j.posts||[]);st.className='mstatus ok';st.textContent=(action==='delete'?'Deleted.':'Updated.')+' Live on the site in about a minute.';
   }catch(e){st.className='mstatus bad';st.textContent=String(e.message||e);}}
+function parseProse(html){const doc=new DOMParser().parseFromString(html,'text/html');const pr=doc.querySelector('.prose');if(!pr)return '';
+  const out=[];pr.querySelectorAll(':scope > *').forEach(el=>{const t=el.tagName.toLowerCase();
+    if(t==='h2')out.push('## '+el.textContent.trim());
+    else if(t==='blockquote')out.push('> '+el.textContent.trim());
+    else if(t==='ul')out.push([].slice.call(el.querySelectorAll('li')).map(li=>'- '+li.textContent.trim()).join('\n'));
+    else if(t==='p')out.push(el.textContent.trim());});
+  return out.join('\n\n');}
+async function editPost(slug){const p=POSTS.find(x=>x.slug===slug);if(!p)return;
+  $('f-title').value=p.title;$('f-cat').value=p.category;$('f-date').value=p.date;$('f-exc').value=p.excerpt;
+  try{const html=await (await fetch('article-'+slug+'.html?cb='+Date.now())).text();$('f-body').value=parseProse(html);}catch(e){}
+  try{const blob=await (await fetch('assets/blog/'+slug+'.png?cb='+Date.now())).blob();const fr=new FileReader();fr.onload=()=>{coverData=fr.result;uploaded=true;$('cover-prev').src=coverData;$('cover-sub').innerHTML='Current cover kept. <a id="use-auto">Use auto cover</a>';bindAuto();preview();};fr.readAsDataURL(blob);}catch(e){}
+  tab('write');preview();save();
+  $('status').className='status';$('status').innerHTML='Editing <b>'+esc(p.title)+'</b>. Change anything, then Publish to save.';}
 
 // init
 (function(){const d=new Date(),mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];$('f-date').value=d.getDate()+' '+mo[d.getMonth()]+' '+d.getFullYear();})();

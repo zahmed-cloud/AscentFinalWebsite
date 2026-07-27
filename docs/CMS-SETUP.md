@@ -46,11 +46,14 @@ Two tabs at the top.
 4. Watch the live preview on the right, exactly as it will look.
 5. Click **Publish to website**. Live in about a minute. Your draft auto-saves as you type.
 
-### Manage posts
-- Lists every post, newest first, showing which are **On blog**.
-- The blog page always shows the **6 pinned** posts; everything else lives on the **All posts** page (a "Read all posts" link appears on the blog once you have more than 6).
-- **Pin / Unpin** to choose the six featured on the blog page.
-- **Delete** removes the post, its cover, and its listing (with a confirm).
+### Manage posts (full screen, organized in two groups)
+- **On the blog** — your pinned posts, newest first (up to 6). These are what visitors see on the blog page.
+- **Archive** — everything not pinned. Still live, but only on the **All posts** page.
+- Each post has three buttons:
+  - **Pin to blog / Unpin** — choose the six featured on the blog page.
+  - **Edit** — loads the post back into the Write tab (title, body, cover and all) so you can change it and Publish again.
+  - **Delete** — removes the post and its cover (asks you to confirm first).
+- Rule of thumb: **pinned = on the blog.** Simple.
 - Changes go live in about a minute.
 
 Nothing is ever lost by accident, and the whole site stays organized from this one screen.

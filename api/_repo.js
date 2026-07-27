@@ -50,8 +50,7 @@ export function card(p){
     </a>`;
 }
 export function featured(posts,n=6){
-  const pin=posts.filter(p=>p.pinned), unp=posts.filter(p=>!p.pinned);
-  return pin.concat(unp).slice(0,n);
+  return posts.filter(p=>p.pinned).slice(0,n); // pinned = on the blog, newest first
 }
 function between(html,tag,inner){
   const re=new RegExp("<!--"+tag+"-->[\\s\\S]*?<!--\\/"+tag+"-->");
