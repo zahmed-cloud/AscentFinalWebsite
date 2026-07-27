@@ -25,7 +25,7 @@ Plain, confident, operator-to-operator, lightly Aussie-inflected. Short sentence
 - Hero support: *We handle the whole go-to-market. We define the strategy, build the systems, and run them. One solid system, one point of accountability.*
 - Eyebrows: `B2B GTM & OUTBOUND` (left) and `EST. 2022 — USA / UK / UAE / AU / EU` (right)
 - Buttons: **Book a call** (sitewide), **See how it works** (hero)
-- Nav labels: Services · Results · Industries · About · Blog · Get in touch
+- Nav labels (in order): Services · Industries · About · Case studies · Blog · Get in touch (Case studies lives at results.html)
 - CTA band heading: **Let's get your pipeline moving.** on every page EXCEPT Services, which deliberately uses **Not sure where to start?**
 - The six service names: GTM Strategy & Foundation · Outbound & Pipeline · Founder LinkedIn Ghostwriting · Paid Ads · Website, Landing Pages & CRO · Marketing Ops & Automation
 - The three packages, all equal weight (no "most popular"): GTM Strategy & Foundation (Start here) · Pipeline & Authority (Core retainer) · Full Growth Partner (Everything)
