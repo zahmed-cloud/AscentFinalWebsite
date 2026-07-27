@@ -285,6 +285,7 @@ footer .wrap{padding:clamp(56px,6vw,90px) var(--pad) 40px}
 .fcol h4{font-family:var(--m);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--redt);margin-bottom:16px;font-weight:500}
 .fcol a,.fcol p{display:block;font-family:var(--a);font-size:15px;color:var(--dim);margin-bottom:11px;transition:.15s}
 .fcol a:hover{color:var(--bone)}
+.fbot a{color:inherit;transition:color .15s}.fbot a:hover{color:var(--bone)}
 .fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--ld);margin-top:50px;padding-top:24px;font-family:var(--m);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim2)}
 
 /* utilities */
