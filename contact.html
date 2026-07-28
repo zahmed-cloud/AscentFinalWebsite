@@ -26,15 +26,15 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://getascent.co/#org", "name": "Ascent", "url": "https://getascent.co/", "logo": "https://getascent.co/assets/favicon.svg", "slogan": "Pipeline, authority and infrastructure for B2B.", "foundingDate": "2022", "founder": {"@type": "Person", "@id": "https://getascent.co/about#jamil", "name": "Jamil Ahmed", "jobTitle": "Founder & Growth Partner", "sameAs": ["https://www.linkedin.com/in/getascent/"]}, "sameAs": ["https://www.linkedin.com/in/getascent/", "https://os.getascent.co/"], "email": "jamil@getascent.co"}, {"@type": "ContactPage", "name": "Contact Ascent", "url": "https://getascent.co/contact", "mainEntity": {"@id": "https://getascent.co/#org"}}]}</script>
 <meta name="theme-color" content="#161619">
 <style>
-  .book-wrap{max-width:960px;margin:0 auto}
-  .book-card{border:1px solid var(--ld);border-radius:8px;padding:8px;background:#fff}
-  .book-card .embed{width:100%;min-height:780px;border:0;border-radius:5px;background:#fff;display:block}
-  .book-fallback{font-family:var(--m);font-size:12.5px;color:var(--dim);margin-top:16px;text-align:center}
-  .book-fallback a{color:var(--redt)}
+  .book-wrap{max-width:680px;margin:0 auto;text-align:center}
+  .book-card{border:1px solid var(--ld);border-radius:12px;padding:60px 44px;background:linear-gradient(180deg,rgba(233,230,220,.035),rgba(233,230,220,0))}
+  .book-card .deliv-lbl{display:block;margin-bottom:16px}
+  .book-card h2{font-size:clamp(26px,3.2vw,40px);line-height:1.05;margin-bottom:16px}
+  .book-card p{color:var(--dim);max-width:42ch;margin:0 auto 32px;font-size:16px;line-height:1.6}
   .book-alt{display:flex;gap:64px;justify-content:center;margin-top:48px;flex-wrap:wrap;text-align:center}
   .book-alt .alt-item{display:flex;flex-direction:column;gap:9px}
   .book-alt a{font-size:18px;color:var(--bone)}
-  @media(max-width:600px){.book-card .embed{min-height:660px}.book-alt{gap:32px;margin-top:36px}}
+  @media(max-width:600px){.book-card{padding:44px 24px}.book-alt{gap:32px;margin-top:36px}}
 </style>
 </head>
 <body>
@@ -73,7 +73,7 @@
     <a href="blog">Blog</a>
   </div>
   <span class="navr">
-    <a class="btn red" href="https://cal.com/jamilahmed/30min" target="_blank" rel="noopener">Book a call <span class="arrow">&#8594;</span></a>
+    <a class="btn red" href="https://calendar.app.google/dSXTygaF9UpKiNyh7" target="_blank" rel="noopener">Book a call <span class="arrow">&#8594;</span></a>
     <button class="burger" aria-label="Menu" aria-expanded="false">Menu</button>
   </span>
 </div></nav>
@@ -94,9 +94,11 @@
 <section><div class="wrap">
   <div class="book-wrap">
     <div class="book-card" data-r>
-      <iframe class="embed" src="https://cal.com/jamilahmed/30min" title="Book a call with Jamil Ahmed" loading="lazy"></iframe>
+      <span class="deliv-lbl">30-minute intro call</span>
+      <h2>Grab a time that works.</h2>
+      <p>Pick a slot straight from my calendar. We'll work out together if we're the right fit — no hard pitch.</p>
+      <a class="btn red" href="https://calendar.app.google/dSXTygaF9UpKiNyh7" target="_blank" rel="noopener">Open my calendar <span class="arrow">&#8594;</span></a>
     </div>
-    <p class="book-fallback" data-r>Calendar not loading? <a href="https://cal.com/jamilahmed/30min" target="_blank" rel="noopener">Open the booking page directly</a>.</p>
     <div class="book-alt" data-r>
       <div class="alt-item"><span class="deliv-lbl">Direct email</span><a href="mailto:jamil@getascent.co">jamil@getascent.co</a></div>
       <div class="alt-item"><span class="deliv-lbl">LinkedIn</span><a href="https://www.linkedin.com/in/getascent/" target="_blank" rel="noopener">linkedin.com/in/getascent</a></div>
