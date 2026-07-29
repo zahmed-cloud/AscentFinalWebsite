@@ -3,13 +3,13 @@
 > Ascent is a GTM agency for B2B companies, founded in 2022 by Jamil Ahmed (Founder & Growth Partner). We handle the whole go-to-market: strategy, outbound, founder LinkedIn content, paid ads, websites and marketing ops. One system, one point of accountability. Clients across the USA, UK, UAE, Australia and Europe. Tagline: "Pipeline, authority and infrastructure for B2B."
 
 ## What Ascent does
-- [Services](https://getascent.co/services.html): six services, one system. GTM Strategy & Foundation, Outbound & Pipeline, Founder LinkedIn Ghostwriting, Paid Ads (LinkedIn + Google), Website/Landing Pages/CRO, Marketing Ops & Automation. Each available standalone or as the full engagement.
-- [How we work](https://getascent.co/how-we-work.html): Strategy, Build, Run, Scale. Three packages: GTM Strategy & Foundation (the starting point), Pipeline & Authority (core retainer), Full Growth Partner (the complete engagement). Pricing discussed on a call.
-- [Case studies](https://getascent.co/results.html): real client work including 360Partners (talent partner to banks and fintechs, founded by an ex-Goldman Sachs director), plus the honest operating ranges of a properly-run outbound system (reply rate 2-6%, warmup takes weeks, predictable pipeline by week 10-14).
-- [Industries](https://getascent.co/industries.html): B2B SaaS, agencies and consultancies, fintech, professional services.
-- [About](https://getascent.co/about.html): built by an operator. Small focused team, no account managers between the client and the work.
-- [Blog](https://getascent.co/blog.html): field notes on outbound, founder brand, GTM strategy, paid, and ops.
-- [Contact](https://getascent.co/contact.html): book a call at https://cal.com/jamilahmed/30min or email jamil@getascent.co.
+- [Services](https://getascent.co/services): six services, one system. GTM Strategy & Foundation, Outbound & Pipeline, Founder LinkedIn Ghostwriting, Paid Ads (LinkedIn + Google), Website/Landing Pages/CRO, Marketing Ops & Automation. Each available standalone or as the full engagement.
+- [How we work](https://getascent.co/how-we-work): Strategy, Build, Run, Scale. Three packages: GTM Strategy & Foundation (the starting point), Pipeline & Authority (core retainer), Full Growth Partner (the complete engagement). Pricing discussed on a call.
+- [Case studies](https://getascent.co/results): real client work including 360Partners (talent partner to banks and fintechs, founded by an ex-Goldman Sachs director), plus the honest operating ranges of a properly-run outbound system (reply rate 2-6%, warmup takes weeks, predictable pipeline by week 10-14).
+- [Industries](https://getascent.co/industries): B2B SaaS, agencies and consultancies, fintech, professional services.
+- [About](https://getascent.co/about): built by an operator. Small focused team, no account managers between the client and the work.
+- [Blog](https://getascent.co/blog): field notes on outbound, founder brand, GTM strategy, paid, and ops.
+- [Contact](https://getascent.co/contact): book a call at https://calendar.google.com/calendar/appointments/schedules/AcZssZ2jekQFQ5Ny4aO7LEXS1zeKG5qta-lnk4YEx9eosryEtErrGx9ACSKav5i37M6Fj5ukKz2nLF9o?gv=true or email jamil@getascent.co.
 
 ## Related
 - [Ascent Outbound OS](https://os.getascent.co/): our free LinkedIn pipeline tool for founders who run their own outreach.
