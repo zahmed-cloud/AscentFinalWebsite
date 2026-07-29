@@ -176,10 +176,9 @@ function normalizeUpload(file){const img=new Image();const url=URL.createObjectU
 function bindAuto(){const a=$('use-auto');if(a)a.onclick=()=>{uploaded=false;$('f-img').value='';$('cover-sub').innerHTML='Auto cover generated. <a id="use-auto">Use auto cover</a>';bindAuto();refreshCover();preview();};}
 function preview(){const f=fields();
   const base=location.href.replace(/[^/]*$/,'');
-  const html=`<!doctype html><html><head><base href="${base}"><link rel="stylesheet" href="css/styles.css"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></head><body>
-  <main><section class="phero"><div class="wrap"><div class="top"><span class="ey"><span class="sq"></span>&nbsp; ${esc(f.category.toUpperCase())}</span><span class="ey">Est. 2022 — USA / UK / UAE / AU / EU</span></div>
-  <h1>${esc(f.title)}</h1><p class="mono" style="font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:22px">By Jamil Ahmed &middot; ${esc(f.category)} &middot; ${esc(f.date)}</p></div></section>
-  <section><div class="wrap">${coverData?`<img src="${coverData}" style="width:100%;height:auto;border-radius:3px;display:block">`:''}<article class="prose" style="margin-top:30px">${f.bodyHTML}</article></div></section></main></body></html>`;
+  const html=`<!doctype html><html><head><base href="${base}"><link rel="stylesheet" href="css/lux.css"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"></head><body>
+  <header class="phero"><span class="glow a"></span><span class="glow c"></span><div class="wrap in"><span class="badge"><b></b> ${esc(f.category)}</span><h1>${esc(f.title)}</h1><p class="artmeta">By Jamil Ahmed &middot; ${esc(f.category)} &middot; ${esc(f.date)}</p></div></header>
+  <section class="sec-pad" style="padding-top:0"><div class="wrap"><div class="article-wrap">${coverData?`<img class="acover" src="${coverData}">`:''}<article class="prose">${f.bodyHTML}</article></div></div></section></body></html>`;
   $('preview').srcdoc=html;}
 function save(){localStorage.setItem('ascent-draft',JSON.stringify({t:$('f-title').value,c:$('f-cat').value,d:$('f-date').value,e:$('f-exc').value,b:$('f-body').value}));}
 function restore(){try{const x=JSON.parse(localStorage.getItem('ascent-draft')||'{}');if(x.t)$('f-title').value=x.t;if(x.c)$('f-cat').value=x.c;if(x.e)$('f-exc').value=x.e;if(x.b)$('f-body').value=x.b;if(x.d)$('f-date').value=x.d;}catch(e){}}

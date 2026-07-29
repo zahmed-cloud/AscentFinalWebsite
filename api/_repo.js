@@ -1,8 +1,11 @@
 // Shared helpers for the Ascent CMS serverless functions.
 // GitHub Git Data API commits + rendering blog.html / all-posts.html / sitemap
-// from posts.json (the single source of truth).
+// from posts.json (the single source of truth). Luminous Light design.
 
-const NAV="<nav><div class=\"wrap navin\">\n  <a class=\"brand\" href=\"/\">Ascent<span class=\"sq\"></span></a>\n  <div class=\"nl\">\n    <div class=\"nl-item has-mega\">\n      <a href=\"services\" aria-haspopup=\"true\" aria-expanded=\"false\">Services <span class=\"mcaret\">&#9662;</span></a>\n      <div class=\"mega\"><div class=\"wrap mega-in\">\n        <div class=\"mega-intro\">\n          <div class=\"mega-ih\">View all services</div>\n          <p>Take one service standalone, or run the whole engine.</p>\n          <a class=\"mega-all\" href=\"services\">See all services <span class=\"arrow\">&#8594;</span></a>\n        </div>\n        <div class=\"mega-col\">\n          <div class=\"mega-h\">Infrastructure</div>\n          <a class=\"mega-link\" href=\"services#s1\"><b>GTM Strategy &amp; Foundation</b><span>ICP, positioning, and the 90-day roadmap</span></a>\n          <a class=\"mega-link\" href=\"services#s6\"><b>Marketing Ops &amp; Automation</b><span>CRM, workflows, and dashboards that connect it all</span></a>\n        </div>\n        <div class=\"mega-col\">\n          <div class=\"mega-h\">Pipeline</div>\n          <a class=\"mega-link\" href=\"services#s2\"><b>Outbound &amp; Pipeline</b><span>Multi-channel outbound that books qualified calls weekly</span></a>\n          <a class=\"mega-link\" href=\"services#s4\"><b>Paid Ads</b><span>LinkedIn and Google campaigns that create and capture demand</span></a>\n        </div>\n        <div class=\"mega-col\">\n          <div class=\"mega-h\">Authority</div>\n          <a class=\"mega-link\" href=\"services#s3\"><b>Founder LinkedIn Ghostwriting</b><span>Turn your LinkedIn into an authority asset</span></a>\n          <a class=\"mega-link\" href=\"services#s5\"><b>Website, Landing Pages &amp; CRO</b><span>Sites and pages built to convert visitors into leads</span></a>\n        </div>\n      </div></div>\n    </div>\n    <a href=\"industries\">Industries</a>\n    <a href=\"about\">About</a>\n    <a href=\"results\">Case studies</a>\n    <a href=\"blog\" class=\"active\">Blog</a>\n  </div>\n  <span class=\"navr\">\n    <a class=\"btn red\" href=\"https://calendar.app.google/dSXTygaF9UpKiNyh7\" target=\"_blank\" rel=\"noopener\">Book a call <span class=\"arrow\">&#8594;</span></a>\n    <button class=\"burger\" aria-label=\"Menu\" aria-expanded=\"false\">Menu</button>\n  </span>\n</div></nav>", CTA="<section class=\"ctaband\" id=\"book\"><div class=\"wrap\">\n  <h2 data-r>Let's get your pipeline moving.</h2>\n  <a class=\"btn bone\" href=\"https://calendar.app.google/dSXTygaF9UpKiNyh7\" target=\"_blank\" rel=\"noopener\" data-r>Book a call <span class=\"arrow\">&#8594;</span></a>\n</div></section>", FOOT="<footer><div class=\"wrap\">\n  <div class=\"fgrid\">\n    <div class=\"fbrand\">\n      <a class=\"brand\" href=\"/\">Ascent<span class=\"sq\"></span></a>\n      <p>Pipeline, authority and infrastructure for B2B. One system, one point of accountability.</p>\n    </div>\n    <div class=\"fcol\">\n      <h4>Company</h4>\n      <a href=\"services\">Services</a>\n      <a href=\"industries\">Industries</a>\n      <a href=\"about\">About</a>\n      <a href=\"results\">Case studies</a>\n      <a href=\"how-we-work\">How we work</a>\n      <a href=\"blog\">Blog</a>\n    </div>\n    <div class=\"fcol\">\n      <h4>Get in touch</h4>\n      \n      <a href=\"mailto:jamil@getascent.co\">jamil@getascent.co</a>\n      <a href=\"https://www.linkedin.com/in/getascent/\">LinkedIn</a>\n    </div>\n    <div class=\"fcol\">\n      <h4>Coverage</h4>\n      <p>USA &middot; UK &middot; UAE</p>\n      <p>Australia &middot; Europe</p>\n    </div>\n  </div>\n  <div class=\"fbot\"><span>&copy; 2026 Ascent&#9642; &mdash; getascent.co</span><span class=\"fbot-legal\"><a href=\"privacy\">Privacy</a> &middot; <a href=\"terms\">Terms</a></span><span>B2B GTM &amp; Outbound</span></div>\n</div></footer>";
+const BOOK="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2jekQFQ5Ny4aO7LEXS1zeKG5qta-lnk4YEx9eosryEtErrGx9ACSKav5i37M6Fj5ukKz2nLF9o?gv=true";
+const NAV='<nav><div class="wrap navin"><a class="brand" href="/">Ascent<i></i></a><span class="nl"><a href="services">Services</a><a href="industries">Industries</a><a href="about">About</a><a href="results">Case studies</a><a href="blog" class="on">Blog</a></span><a class="btn g" href="'+BOOK+'" target="_blank" rel="noopener">Book a call <span class="arw">&#8594;</span></a></div></nav>';
+const CTA='<div class="ctaband"><div class="wrap"><div class="ctapanel"><span class="cg"></span><h2>Let&#39;s get your pipeline moving.</h2><a class="btn" href="'+BOOK+'" target="_blank" rel="noopener">Book a call &#8594;</a></div></div></div>';
+const FOOT='<footer class="ft"><div class="wrap"><div class="fgrid"><div class="fb"><a class="brand" href="/">Ascent<i></i></a><p>Pipeline, authority and infrastructure for B2B. One system, one point of accountability.</p></div><div class="fc"><h4>Company</h4><a href="services">Services</a><a href="industries">Industries</a><a href="about">About</a><a href="results">Case studies</a><a href="how-we-work">How we work</a><a href="blog">Blog</a></div><div class="fc"><h4>Get in touch</h4><a href="mailto:jamil@getascent.co">jamil@getascent.co</a><a href="tel:+447445551437">+44 7445 551437</a><a href="https://www.linkedin.com/in/getascent/" target="_blank" rel="noopener">LinkedIn</a><a href="contact">Contact</a></div><div class="fc"><h4>Coverage</h4><p>USA &middot; UK &middot; UAE</p><p>Australia &middot; Europe</p></div></div><div class="fbot"><span>&copy; 2026 Ascent&#9642; &mdash; getascent.co</span><span><a href="privacy">Privacy</a> &middot; <a href="terms">Terms</a></span><span>B2B GTM &amp; Outbound</span></div></div></footer>';
 const OWNER_REPO=()=>process.env.GITHUB_REPO;
 const BRANCH=()=>process.env.GITHUB_BRANCH||"main";
 const CORE=["","services","results","industries","about","how-we-work","blog","all-posts","contact","privacy","terms"];
@@ -20,7 +23,6 @@ export async function getFile(p){
   const j=await gh(R+"/contents/"+encodeURIComponent(p).replace(/%2F/g,"/")+"?ref="+BRANCH());
   return {content:Buffer.from(j.content,"base64").toString("utf8"),sha:j.sha};
 }
-// files:[{path,content,encoding}] deletions:[path]
 export async function commit(files,deletions,message){
   const R="/repos/"+OWNER_REPO();
   const ref=await gh(R+"/git/ref/heads/"+BRANCH());
@@ -39,19 +41,9 @@ export async function commit(files,deletions,message){
 }
 
 export function card(p){
-  return `    <a class="bcard" href="article-${p.slug}" data-r>
-      <img width="1600" height="1000" class="thumb" src="assets/blog/${p.slug}.png" alt="${esc(p.alt||p.title)}" loading="lazy">
-      <div class="bc">
-        <span class="cat">${esc(p.category)}</span>
-        <h2>${esc(p.title)}</h2>
-        <p>${esc(p.excerpt)}</p>
-        <div class="meta">${esc(p.category)} &middot; ${esc(p.date)}</div>
-      </div>
-    </a>`;
+  return `    <a class="card post" href="article-${p.slug}"><img class="cov" src="assets/blog/${p.slug}.png" alt="${esc(p.alt||p.title)}" loading="lazy"><div class="pb"><span class="cat">${esc(p.category)}</span><h3>${esc(p.title)}</h3><p>${esc(p.excerpt)}</p><div class="meta">${esc(p.category)} &middot; ${esc(p.date)}</div></div></a>`;
 }
-export function featured(posts,n=6){
-  return posts.filter(p=>p.pinned).slice(0,n); // pinned = on the blog, newest first
-}
+export function featured(posts,n=6){ return posts.filter(p=>p.pinned).slice(0,n); }
 function between(html,tag,inner){
   const re=new RegExp("<!--"+tag+"-->[\\s\\S]*?<!--\\/"+tag+"-->");
   return html.replace(re,"<!--"+tag+"-->"+inner+"<!--/"+tag+"-->");
@@ -59,7 +51,7 @@ function between(html,tag,inner){
 export function renderBlog(html,posts){
   const cards="\n"+featured(posts).map(card).join("\n")+"\n  ";
   html=between(html,"POSTS",cards);
-  const more=posts.length>6?'<div class="center mt-l" data-r><a class="btn ghostd" href="all-posts">Read all posts <span class="arrow">&#8594;</span></a></div>':'';
+  const more=posts.length>6?'<div class="allc"><a href="all-posts">Read all posts &#8594;</a></div>':'';
   return between(html,"MORE",more);
 }
 export function renderAllPosts(html,posts){
@@ -69,7 +61,7 @@ export function renderAllPosts(html,posts){
 export function buildSitemap(posts){
   const urls=CORE.map(p=>"https://getascent.co/"+p).concat(posts.map(p=>"https://getascent.co/article-"+p.slug));
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+
-    urls.map(u=>'  <url><loc>'+u+'</loc><lastmod>2026-07-28</lastmod></url>').join("\n")+"\n</urlset>\n";
+    urls.map(u=>'  <url><loc>'+u+'</loc><lastmod>2026-07-29</lastmod></url>').join("\n")+"\n</urlset>\n";
 }
 export function articleHTML(p,bodyHTML){
   const jsonld=JSON.stringify({"@context":"https://schema.org","@type":"BlogPosting",headline:p.title,description:p.excerpt,datePublished:p.iso,dateModified:p.iso,author:{"@type":"Person",name:"Jamil Ahmed",url:"https://www.linkedin.com/in/getascent/"},publisher:{"@type":"Organization",name:"Ascent"},image:"https://getascent.co/assets/blog/"+p.slug+".png",mainEntityOfPage:"https://getascent.co/article-"+p.slug,url:"https://getascent.co/article-"+p.slug});
@@ -82,7 +74,7 @@ export function articleHTML(p,bodyHTML){
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/lux.css">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="canonical" href="https://getascent.co/article-${p.slug}">
 <meta property="og:type" content="article">
@@ -97,33 +89,17 @@ export function articleHTML(p,bodyHTML){
 <meta name="twitter:title" content="${esc(p.title)} — Ascent">
 <meta name="twitter:description" content="${esc(p.excerpt)}">
 <meta name="twitter:image" content="https://getascent.co/assets/blog/${p.slug}.png">
-<meta name="theme-color" content="#161619">
+<meta name="theme-color" content="#fbfaf8">
 <script type="application/ld+json">${jsonld}<\/script>
 </head>
 <body>
-
 ${NAV}
-
-<main>
-<section class="phero"><div class="wrap">
-  <div class="top" data-r><span class="ey"><span class="sq"></span>&nbsp; ${esc(p.category.toUpperCase())}</span><span class="ey">Est. 2022 — USA / UK / UAE / AU / EU</span></div>
-  <h1 data-r>${esc(p.title)}</h1>
-  <p class="mono" data-r style="font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:22px">By Jamil Ahmed &middot; ${esc(p.category)} &middot; ${esc(p.date)}</p>
-</div></section>
-
-<section><div class="wrap">
-  <img src="assets/blog/${p.slug}.png" alt="${esc(p.title)}" width="1600" height="1000" style="width:100%;height:auto;border-radius:3px;display:block" data-r>
-  <article class="prose" data-r style="margin-top:44px">
+<header class="phero"><span class="glow a"></span><span class="glow c"></span><div class="wrap in"><span class="badge"><b></b> ${esc(p.category)}</span><h1>${esc(p.title)}</h1><p class="artmeta">By Jamil Ahmed &middot; ${esc(p.category)} &middot; ${esc(p.date)}</p></div></header>
+<section class="sec-pad" style="padding-top:0"><div class="wrap"><div class="article-wrap"><img class="acover" src="assets/blog/${p.slug}.png" alt="${esc(p.title)}" width="1600" height="1000"><article class="prose">
 ${bodyHTML}
-  </article>
-</div></section>
-</main>
-
+</article></div></div></section>
 ${CTA}
-
 ${FOOT}
-
-<script src="js/script.js"><\/script>
 </body></html>
 `;
 }
