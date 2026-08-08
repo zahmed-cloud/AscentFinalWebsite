@@ -193,8 +193,20 @@ function tab(which){$('tab-write').classList.toggle('on',which==='write');$('tab
   if(which==='manage')loadPosts();}
 $('tab-write').onclick=()=>tab('write');$('tab-manage').onclick=()=>tab('manage');
 
-// gate
-$('gate-go').addEventListener('click',()=>{const v=$('gate-pw').value;if(!v){$('gate-err').textContent='Enter your password.';return;}PW=v;$('gate').style.display='none';});
+// gate — verifies the password against the server before letting you in.
+// A bare request to /api/publish returns 401 for a wrong password, or 400
+// ("missing fields") when the password is right — so 400 means authenticated.
+$('gate-go').addEventListener('click',async ()=>{
+  const v=$('gate-pw').value;
+  if(!v){$('gate-err').textContent='Enter your password.';return;}
+  const btn=$('gate-go'); btn.disabled=true; $('gate-err').textContent='Checking…';
+  try{
+    const r=await fetch('/api/publish',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:v})});
+    if(r.status===401){$('gate-err').textContent='Wrong password.';btn.disabled=false;return;}
+    if(r.status===400||r.ok){PW=v;$('gate-err').textContent='';$('gate').style.display='none';return;}
+    const j=await r.json().catch(()=>({})); $('gate-err').textContent=j.error||'Something went wrong. Try again.'; btn.disabled=false;
+  }catch(e){$('gate-err').textContent='Network error — check your connection.';btn.disabled=false;}
+});
 $('gate-pw').addEventListener('keydown',e=>{if(e.key==='Enter')$('gate-go').click();});
 
 // publish
