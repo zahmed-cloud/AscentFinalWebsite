@@ -1,47 +1,106 @@
 {
   "posts": [
     {
-      "slug": "cold-email-opener",
-      "title": "The cold email opener that earns the next line",
-      "category": "Outbound",
-      "date": "12 Jan 2026",
-      "iso": "2026-01-12",
-      "excerpt": "Your first sentence has two jobs: prove you did the work, and cost the reader nothing.",
-      "alt": "Abstract type bars, Swiss composition",
-      "cover": "assets/blog/cold-email-opener.png",
-      "pinned": true
-    },
-    {
-      "slug": "post-like-an-operator",
-      "title": "Post like an operator, not a thought leader",
-      "category": "Founder Brand",
-      "date": "03 Feb 2026",
-      "iso": "2026-02-03",
-      "excerpt": "The founder content that actually moves pipeline reads like a working note, not a keynote.",
-      "alt": "Grid of squares with one filled, Swiss composition",
-      "cover": "assets/blog/post-like-an-operator.png",
-      "pinned": true
-    },
-    {
-      "slug": "pick-one-icp",
-      "title": "Pick one ICP before you touch a single channel",
+      "slug": "one-partner-vs-vendors",
+      "title": "One GTM partner vs five vendors: why fragmented marketing kills pipeline",
       "category": "GTM Strategy",
-      "date": "24 Feb 2026",
-      "iso": "2026-02-24",
-      "excerpt": "Most go-to-market plans stall because they are trying to sell to everyone at once.",
-      "alt": "Concentric target rings, Swiss composition",
-      "cover": "assets/blog/pick-one-icp.png",
-      "pinned": true
+      "date": "07 Aug 2026",
+      "iso": "2026-08-07",
+      "updated": "2026-08-09",
+      "excerpt": "Juggling five specialists feels efficient and quietly isn't. Pipeline leaks in the gaps no vendor owns.",
+      "alt": "Five outlined squares converging on one filled mulberry square, Swiss composition",
+      "cover": "assets/blog/one-partner-vs-vendors.png",
+      "pinned": true,
+      "faq": [
+        {"q": "Is it better to hire one marketing agency or several specialists?", "a": "For most B2B companies between roughly £1M and £20M ARR, one partner that owns the whole go-to-market beats a roster of specialists. Specialists each optimise their own metric, and pipeline leaks in the handoffs nobody owns. One partner gives you a single system and a single point of accountability."},
+        {"q": "What's wrong with using multiple marketing vendors?", "a": "Nothing individually — the problem is the coordination tax. You become the only person who sees the whole picture, spend gets duplicated, data ends up siloed, and no one is accountable for whether it all produces revenue. Deals leak in the gaps between vendors."},
+        {"q": "When should I consolidate my marketing under one partner?", "a": "Roughly between £1M and £20M ARR. Below that, focus on one channel done well rather than hiring lots of help. Above it, you can afford dedicated in-house specialists with a leader to coordinate them."},
+        {"q": "Does one partner mean putting all my eggs in one basket?", "a": "It concentrates accountability rather than risk. Spreading work across vendors spreads accountability until no one owns the outcome. The thing to get right is choosing the right partner, not hiring more of them."}
+      ]
     },
     {
-      "slug": "paid-ads-louder",
-      "title": "Paid ads make your GTM louder, not better",
-      "category": "Paid",
-      "date": "17 Mar 2026",
-      "iso": "2026-03-17",
-      "excerpt": "Spend amplifies whatever is already true about your funnel, including the broken parts.",
-      "alt": "Amplifying bars, Swiss composition",
-      "cover": "assets/blog/paid-ads-louder.png",
+      "slug": "choose-outbound-agency",
+      "title": "How to choose a B2B outbound agency (7 questions and the red flags)",
+      "category": "GTM Strategy",
+      "date": "30 Jul 2026",
+      "iso": "2026-07-30",
+      "updated": "2026-08-09",
+      "excerpt": "The seven questions that separate a real outbound partner from a retainer that quietly burns your budget.",
+      "alt": "Checklist rows with one row highlighted in mulberry, Swiss composition",
+      "cover": "assets/blog/choose-outbound-agency.png",
+      "pinned": true,
+      "faq": [
+        {"q": "How do I choose a B2B outbound agency?", "a": "Judge them on three things: whether they can name real clients and outcomes in your space, whether they own deliverability and targeting rather than just copy, and whether they'll define a qualified meeting the way you do. Ask the seven questions in this guide and watch how directly they answer."},
+        {"q": "What are the red flags of a bad lead generation agency?", "a": "Guaranteed lead numbers from a cold start, no mention of sending infrastructure or deliverability, long lock-in contracts, per-meeting pricing with no quality bar, and refusing to say who actually works on your account."},
+        {"q": "Are outbound agencies worth it, or are they a scam?", "a": "The category has a trust problem because weak agencies book junk meetings and hide behind vanity activity. Good ones are worth it — they get you to pipeline faster than hiring in-house. Vetting questions are how you tell them apart."},
+        {"q": "Should I sign a 12-month contract with an outbound agency?", "a": "Be cautious. A reasonable notice period is fine, but a long lock-in with a heavy exit fee protects the agency, not you. Confident agencies keep you with results, not contract terms."}
+      ]
+    },
+    {
+      "slug": "cold-email-not-booking",
+      "title": "Your cold email isn't booking meetings? Fix it in this order",
+      "category": "Outbound",
+      "date": "16 Jul 2026",
+      "iso": "2026-07-16",
+      "updated": "2026-08-09",
+      "excerpt": "Fix it in the right order — deliverability, then targeting, then the ask — or you'll fix the wrong thing.",
+      "alt": "Three stacked bars narrowing into a funnel, Swiss composition",
+      "cover": "assets/blog/cold-email-not-booking.png",
+      "pinned": true,
+      "faq": [
+        {"q": "Why are my cold emails not booking meetings?", "a": "Work backwards. Low open rates mean a deliverability problem — you're in spam. Good opens but few replies mean a targeting problem — wrong people. Good replies but no meetings mean the ask is wrong — you're asking for too much, too soon. Fix in that order."},
+        {"q": "Why are my cold emails going to spam?", "a": "Usually missing authentication (SPF, DKIM, DMARC), sending from your primary domain, sending too much too fast, or a dirty list with high bounces. Set up authentication, use warmed secondary domains, and keep volume to 20–50 per inbox per day."},
+        {"q": "What's a good cold email reply rate in 2026?", "a": "Around 3–5% is average and 10%+ is strong. Meetings get booked on roughly 1–2% of sends in a healthy campaign. Below average usually points to deliverability or targeting, not copy."},
+        {"q": "Is cold email dead?", "a": "No — sloppy cold email is dead. High-volume, poorly-targeted, badly-delivered email stopped working. Well-targeted email from a healthy domain, asking for a small next step, still books meetings every week."},
+        {"q": "How many cold emails can I send per day?", "a": "Keep it to roughly 20–50 per inbox per day, spread across multiple warmed inboxes and domains. New domains should be warmed for 3–4 weeks first. Blasting hundreds from one inbox is the fastest way into spam."}
+      ]
+    },
+    {
+      "slug": "lead-gen-agency-cost",
+      "title": "How much does a B2B outbound agency cost in 2026?",
+      "category": "Outbound",
+      "date": "02 Jul 2026",
+      "iso": "2026-07-02",
+      "updated": "2026-08-09",
+      "excerpt": "Real retainer and per-meeting ranges for 2026, and why pay-per-lead pricing works against you.",
+      "alt": "Ascending bar chart in mulberry tones, Swiss composition",
+      "cover": "assets/blog/lead-gen-agency-cost.png",
+      "pinned": true,
+      "faq": [
+        {"q": "How much does a B2B lead generation agency cost?", "a": "Most charge £4k–£7k a month on retainer for specialist outbound. Full go-to-market partners run up to around £15k a month. Pay-per-meeting pricing is roughly £150–£600 per booked call."},
+        {"q": "Is pay-per-lead or pay-per-meeting a good deal?", "a": "Usually not. It looks lower-risk, but it pushes the agency to book volume rather than quality, so you pay for meetings that don't convert. Measure cost per qualified opportunity, not cost per booking."},
+        {"q": "Why do outbound agencies charge a monthly retainer?", "a": "Because outbound has real fixed costs — data, sending infrastructure, deliverability and skilled people — and building pipeline is ongoing work, not a one-off. A retainer also aligns the agency to your pipeline rather than to a booking count."},
+        {"q": "What's the cheapest way to do outbound?", "a": "The cheapest sticker price is rarely the cheapest outcome. Underpriced outbound tends to skip infrastructure and targeting, which tanks deliverability and lead quality. Cheap junk meetings cost you most in your team's wasted time."}
+      ]
+    },
+    {
+      "slug": "outbound-agency-vs-sdr",
+      "title": "Outbound agency vs in-house SDR: which fills your pipeline faster?",
+      "category": "Outbound",
+      "date": "18 Jun 2026",
+      "iso": "2026-06-18",
+      "updated": "2026-08-09",
+      "excerpt": "The honest maths on cost, ramp and risk — and the exact stage where hiring in-house finally wins.",
+      "alt": "Two columns of bars, one filled mulberry and one outlined, Swiss composition",
+      "cover": "assets/blog/outbound-agency-vs-sdr.png",
+      "pinned": true,
+      "faq": [
+        {"q": "Is an outbound agency worth it?", "a": "Yes, if you need pipeline quickly and your offer and ICP are clear. An agency gets you to booked meetings in weeks rather than months, with no hiring or attrition risk. It's not worth it if you're using it to avoid figuring out who you sell to."},
+        {"q": "How much does an outbound agency cost per month?", "a": "Most specialist outbound agencies charge £4k–£7k a month. A full go-to-market partner that also owns strategy and infrastructure can run up to around £15k, depending on scope."},
+        {"q": "How long before an agency starts booking meetings?", "a": "Outreach usually starts within 2–4 weeks, once targeting and sending infrastructure are set up. First meetings typically land in the following 30–45 days."},
+        {"q": "When should I hire an in-house SDR instead?", "a": "Once your sales motion is proven, you're past roughly £3–5M ARR, and you have someone to manage and coach the role. Before that, you're paying for ramp and risk on a motion you haven't nailed down yet."},
+        {"q": "Can I run an agency and in-house together?", "a": "Yes, and it's often the smartest setup. Let the agency run top-of-funnel outbound while your team owns qualification and closing, then bring outbound in-house once the playbook is proven."}
+      ]
+    },
+    {
+      "slug": "booked-calls",
+      "title": "Booked calls are a number, not a strategy",
+      "category": "Outbound",
+      "date": "28 May 2026",
+      "iso": "2026-05-28",
+      "excerpt": "How to tell whether your outbound is filling the calendar or just filling the report.",
+      "alt": "Calendar grid with filled cells, Swiss composition",
+      "cover": "assets/blog/booked-calls.png",
       "pinned": true
     },
     {
@@ -56,14 +115,47 @@
       "pinned": true
     },
     {
-      "slug": "booked-calls",
-      "title": "Booked calls are a number, not a strategy",
+      "slug": "paid-ads-louder",
+      "title": "Paid ads make your GTM louder, not better",
+      "category": "Paid",
+      "date": "17 Mar 2026",
+      "iso": "2026-03-17",
+      "excerpt": "Spend amplifies whatever is already true about your funnel, including the broken parts.",
+      "alt": "Amplifying bars, Swiss composition",
+      "cover": "assets/blog/paid-ads-louder.png",
+      "pinned": true
+    },
+    {
+      "slug": "pick-one-icp",
+      "title": "Pick one ICP before you touch a single channel",
+      "category": "GTM Strategy",
+      "date": "24 Feb 2026",
+      "iso": "2026-02-24",
+      "excerpt": "Most go-to-market plans stall because they are trying to sell to everyone at once.",
+      "alt": "Concentric target rings, Swiss composition",
+      "cover": "assets/blog/pick-one-icp.png",
+      "pinned": true
+    },
+    {
+      "slug": "post-like-an-operator",
+      "title": "Post like an operator, not a thought leader",
+      "category": "Founder Brand",
+      "date": "03 Feb 2026",
+      "iso": "2026-02-03",
+      "excerpt": "The founder content that actually moves pipeline reads like a working note, not a keynote.",
+      "alt": "Grid of squares with one filled, Swiss composition",
+      "cover": "assets/blog/post-like-an-operator.png",
+      "pinned": true
+    },
+    {
+      "slug": "cold-email-opener",
+      "title": "The cold email opener that earns the next line",
       "category": "Outbound",
-      "date": "28 May 2026",
-      "iso": "2026-05-28",
-      "excerpt": "How to tell whether your outbound is filling the calendar or just filling the report.",
-      "alt": "Calendar grid with filled cells, Swiss composition",
-      "cover": "assets/blog/booked-calls.png",
+      "date": "12 Jan 2026",
+      "iso": "2026-01-12",
+      "excerpt": "Your first sentence has two jobs: prove you did the work, and cost the reader nothing.",
+      "alt": "Abstract type bars, Swiss composition",
+      "cover": "assets/blog/cold-email-opener.png",
       "pinned": true
     }
   ]

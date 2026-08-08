@@ -64,7 +64,8 @@ export function buildSitemap(posts){
     urls.map(u=>'  <url><loc>'+u+'</loc><lastmod>2026-07-29</lastmod></url>').join("\n")+"\n</urlset>\n";
 }
 export function articleHTML(p,bodyHTML){
-  const jsonld=JSON.stringify({"@context":"https://schema.org","@type":"BlogPosting",headline:p.title,description:p.excerpt,datePublished:p.iso,dateModified:p.iso,author:{"@type":"Person",name:"Jamil Ahmed",url:"https://www.linkedin.com/in/getascent/"},publisher:{"@type":"Organization",name:"Ascent"},image:"https://getascent.co/assets/blog/"+p.slug+".png",mainEntityOfPage:"https://getascent.co/article-"+p.slug,url:"https://getascent.co/article-"+p.slug});
+  const jsonld=JSON.stringify({"@context":"https://schema.org","@type":"BlogPosting",headline:p.title,description:p.excerpt,datePublished:p.iso,dateModified:p.updated||p.iso,author:{"@type":"Person",name:"Jamil Ahmed",url:"https://www.linkedin.com/in/getascent/"},publisher:{"@type":"Organization",name:"Ascent"},image:"https://getascent.co/assets/blog/"+p.slug+".png",mainEntityOfPage:"https://getascent.co/article-"+p.slug,url:"https://getascent.co/article-"+p.slug});
+  const faqld=(p.faq&&p.faq.length)?'\n<script type="application/ld+json">'+JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",mainEntity:p.faq.map(f=>({"@type":"Question",name:f.q,acceptedAnswer:{"@type":"Answer",text:f.a}}))})+'<\/script>':'';
   return `<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
@@ -90,7 +91,7 @@ export function articleHTML(p,bodyHTML){
 <meta name="twitter:description" content="${esc(p.excerpt)}">
 <meta name="twitter:image" content="https://getascent.co/assets/blog/${p.slug}.png">
 <meta name="theme-color" content="#fbfaf8">
-<script type="application/ld+json">${jsonld}<\/script>
+<script type="application/ld+json">${jsonld}<\/script>${faqld}
 </head>
 <body>
 ${NAV}
