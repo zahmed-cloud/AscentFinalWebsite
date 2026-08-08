@@ -29,13 +29,15 @@
 (function(){
   function fit(){
     var h=document.querySelector('.hero h1'); if(!h) return;
+    if(window.innerWidth<=700){ h.style.whiteSpace='normal'; h.style.fontSize=''; return; } /* phones: CSS handles it, wrap big */
     var avail=h.parentElement.clientWidth;
     h.style.whiteSpace='nowrap'; var size=180; h.style.fontSize=size+'px';
     while(h.scrollWidth>avail && size>16){ size-=1; h.style.fontSize=size+'px'; }
-    if(size<30){ h.style.whiteSpace='normal'; h.style.fontSize='clamp(40px,11vw,70px)'; } /* phones: allow wrap */
+    if(size<34){ h.style.whiteSpace='normal'; h.style.fontSize='clamp(40px,10vw,70px)'; } /* narrow tablets: allow wrap */
   }
   window.addEventListener('load',fit); window.addEventListener('resize',fit);
   document.addEventListener('DOMContentLoaded',fit); setTimeout(fit,60);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit);}
 })();
 </script></body>
 </html>
