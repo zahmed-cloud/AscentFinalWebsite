@@ -277,7 +277,7 @@ section{padding:clamp(60px,8vw,110px) 0}
   .navin.menuopen .navtog span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .navin.menuopen .navtog span:nth-child(2){opacity:0}
   .navin.menuopen .navtog span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .nl{position:absolute;left:calc(-1*clamp(22px,4vw,44px));right:calc(-1*clamp(22px,4vw,44px));top:calc(100% + 1px);flex-direction:column;gap:0;display:none;margin:0;font-size:16px;color:var(--ink);background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 24px 44px rgba(21,21,27,.10);padding:4px 0 14px}
+  .nl{position:absolute;left:0;right:0;top:calc(100% + 1px);flex-direction:column;gap:0;display:none;margin:0;font-size:16px;color:var(--ink);background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 24px 44px rgba(21,21,27,.10);padding:4px 0 14px}
   .navin.menuopen .nl{display:flex}
   .nl a:not(.menubook){padding:15px clamp(22px,4vw,44px);border-bottom:1px solid var(--line)}
   .nl a:not(.menubook):hover{color:var(--mul)}
