@@ -100,6 +100,7 @@ ${bodyHTML}
 </article></div></div></section>
 ${CTA}
 ${FOOT}
+<script src="js/nav.js" defer></script>
 </body></html>
 `;
 }
