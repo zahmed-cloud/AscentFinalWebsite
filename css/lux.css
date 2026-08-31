@@ -94,9 +94,14 @@ nav .btn.g:hover{background:#DCEDE4}
 .hero .btn.g:hover{background:#DCEDE4}
 .hero .btn.o{color:#F2F6F6;border-color:var(--hair-d)}
 .hero .btn.o:hover{background:var(--act);border-color:var(--act);color:#fff}
-.hstrip{margin-top:52px;padding-top:22px;border-top:1px solid var(--hair-d);
-  display:flex;gap:10px 26px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:rgba(242,246,246,.9)}
-.hstrip span{position:relative}.hstrip span:not(:last-child):after{content:"\00B7";margin-left:26px;color:rgba(242,246,246,.4)}
+.hstrip{margin-top:56px;display:flex;gap:14px 28px;flex-wrap:wrap}
+.hstrip a{--hc:var(--red);display:flex;align-items:center;gap:14px;padding:15px 24px 17px 18px;
+  font-size:16px;font-weight:500;color:#F2F6F6;text-decoration:none;
+  border-bottom:2px solid var(--hc);transition:background .3s ease}
+.hstrip a:nth-child(3n+2){--hc:var(--blue)}
+.hstrip a:nth-child(3n){--hc:var(--act2)}
+.hstrip a:hover{background:var(--hc);color:#fff}
+.hstrip a .arw{font-size:17px;line-height:1}
 
 /* ---- sections ------------------------------------------------------------ */
 section{padding:clamp(60px,8vw,110px) 0;background:#fff}
@@ -425,3 +430,6 @@ h2 .t-blue{color:var(--blue)}
 
 /* ===== visible keyboard focus everywhere ===== */
 a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,.scard:focus-visible,.card:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:6px}
+
+/* anchor targets clear the floating nav */
+:target{scroll-margin-top:96px}

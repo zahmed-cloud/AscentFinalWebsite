@@ -8,6 +8,22 @@
 (function () {
   document.documentElement.classList.add("js");
 
+  /* Chrome + scroll-behavior:smooth can drop the on-load hash scroll.
+     If we're still at the top while the target sits far away, take it there. */
+  if (location.hash) {
+    addEventListener("load", function () {
+      setTimeout(function () {
+        var t = document.getElementById(location.hash.slice(1));
+        if (t && window.scrollY < 40 && t.getBoundingClientRect().top > innerHeight * 0.9) {
+          var de = document.documentElement;
+          de.style.scrollBehavior = "auto"; /* the on-load jump must be instant or Chrome may drop it */
+          t.scrollIntoView();
+          de.style.scrollBehavior = "";
+        }
+      }, 80);
+    });
+  }
+
   var nav = document.querySelector("nav.floating");
   if (nav) {
     var bar = function () {
