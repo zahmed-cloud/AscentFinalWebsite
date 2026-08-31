@@ -39,7 +39,7 @@ html{scroll-behavior:smooth;background:#fff}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5}
 a{color:inherit;text-decoration:none;cursor:pointer}
-.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(22px,4vw,44px)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(22px,4vw,40px)}
 
 /* ---- nav: the evergreen bar ----------------------------------------------
    Solid and sticky on inner pages. The homepage adds .floating, which strips
@@ -87,7 +87,7 @@ nav .btn.g:hover{background:#DCEDE4}
 .hero .in{position:relative;width:100%}
 .hero h1{font-size:clamp(44px,5.6vw,78px);font-weight:600;letter-spacing:-.035em;line-height:1.04;margin:clamp(34px,4.5vw,52px) 0 0;white-space:nowrap;color:#F2F6F6}
 .hero h1 .g{background:none;-webkit-text-fill-color:currentColor;color:var(--mint)}
-.hsub{font-size:clamp(21px,2.6vw,31px);font-weight:600;color:rgba(242,246,246,.92);margin:26px 0 0;letter-spacing:-.02em}
+.hsub{display:none}
 .hpara{font-size:18px;line-height:1.65;color:rgba(242,246,246,.92);max-width:56ch;margin:20px 0 0}
 .hcta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
 .hero .btn.g{background:#fff;color:var(--dark)}
@@ -117,27 +117,36 @@ h2 .t-blue{color:var(--blue)}
 .probleft .p{max-width:100ch;font-size:17px;line-height:1.7;font-weight:400;color:var(--ink2);margin:0}
 .probleft .p b{font-weight:500;color:var(--act)}
 
-/* pillars */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pcard{padding:34px 30px}
-.pic{width:52px;height:52px;border-radius:12px;background:var(--act);color:#fff;display:grid;place-items:center;font-size:22px;box-shadow:none}
-.pcard h3{font-size:22px;font-weight:600;letter-spacing:-.02em;margin:20px 0 10px}
-.pcard p{font-size:15px;line-height:1.6;color:var(--ink2)}
+/* pillars: the mockup's hairline trio. No cards, no icons; a rule on top and
+   rules between, exactly as approved. */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.pcard{padding:30px 36px 6px 0;background:none;border:0;border-radius:0;box-shadow:none}
+.pcard:hover{transform:none}
+.grid3 .pcard:not(:first-child){border-left:1px solid var(--line);padding-left:36px}
+.pic{display:none}
+.pcard h3{font-size:21px;font-weight:600;letter-spacing:-.02em;margin:0 0 9px}
+.pcard p{font-size:14.5px;line-height:1.65;color:var(--ink2)}
 
-/* services grid: each card carries its own accent and fills it on hover */
-.grid3s{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.scard{padding:30px;position:relative;display:block}
+/* services: the mockup's numbered rows. Full-width lines under a rule, each
+   carrying its own accent, flooding that colour on hover. */
+.grid3s{display:block;border-top:1px solid var(--line)}
+.scard{display:grid;grid-template-columns:56px 300px 1fr 30px;gap:18px;align-items:baseline;
+  padding:22px 0 22px 14px;border:0;border-bottom:1px solid var(--line);border-left:3px solid transparent;
+  border-radius:0;background:none;box-shadow:none;position:relative;
+  transition:background .35s cubic-bezier(.22,.61,.21,1),border-color .35s}
+.scard:hover{transform:none}
 .scard:nth-child(3n+1){--row:var(--act)}
 .scard:nth-child(3n+2){--row:var(--red)}
 .scard:nth-child(3n+3){--row:var(--blue)}
-.scard .sn{font-family:var(--mono);font-size:12px;color:var(--row,var(--act));letter-spacing:.08em;transition:color .3s}
-.scard h3{font-size:18.5px;font-weight:600;letter-spacing:-.01em;margin:14px 0 8px;max-width:88%;transition:color .3s}
-.scard p{font-size:14.5px;line-height:1.55;color:var(--ink2);transition:color .3s}
-.scard .ar{position:absolute;top:28px;right:28px;color:var(--row,var(--act));opacity:0;transition:.25s}
-.scard:hover{background:var(--row,var(--act));border-color:var(--row,var(--act))}
-.scard:hover .sn,.scard:hover .ar{color:rgba(255,255,255,.85);opacity:1}
+.scard .sn{font-family:var(--mono);font-size:12.5px;color:var(--row,var(--act));letter-spacing:.08em;transition:color .35s}
+.scard h3{font-size:17px;font-weight:600;letter-spacing:-.015em;margin:0;transition:color .35s}
+.scard p{font-size:14px;line-height:1.55;color:var(--ink2);transition:color .35s}
+.scard .ar{position:static;color:var(--row,var(--act));opacity:1;text-align:right;transition:color .35s}
+.scard:hover{background:var(--row,var(--act));border-left-color:var(--row,var(--act))}
+.scard:hover .sn,.scard:hover .ar{color:rgba(255,255,255,.85)}
 .scard:hover h3{color:#fff}
 .scard:hover p{color:rgba(255,255,255,.88)}
+@media(max-width:900px){.scard{grid-template-columns:44px 1fr 30px}.scard p{grid-column:2/4}}
 
 /* steps: these sit on the ridge-above-the-clouds photo band */
 .stepband{position:relative;overflow:hidden;background:var(--dark);color:#F2F6F6}
@@ -148,7 +157,9 @@ h2 .t-blue{color:var(--blue)}
 .stepband .wrap{position:relative;z-index:2}
 .stepband .shead h2{color:#F2F6F6}
 .stepband .shead h2 .g{color:var(--mint)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--hair-d)}
+.steps .step{padding:30px 30px 6px 0}
+.steps .step:not(:first-child){border-left:1px solid var(--hair-d);padding-left:30px}
 .step{position:relative}
 .step .stepn{font-family:var(--mono);font-size:13px;color:var(--mint);font-weight:600}
 .step h3{font-size:20px;font-weight:600;letter-spacing:-.02em;margin:12px 0 8px}
@@ -156,7 +167,7 @@ h2 .t-blue{color:var(--blue)}
 .stepband .step p{color:rgba(242,246,246,.85)}
 section .steps .step p{color:var(--ink2)}
 section.stepband .steps .step p{color:rgba(242,246,246,.85)}
-.step:not(:last-child):after{content:"";position:absolute;top:8px;right:-13px;width:6px;height:6px;border-top:2px solid rgba(242,246,246,.4);border-right:2px solid rgba(242,246,246,.4);transform:rotate(45deg)}
+.step:not(:last-child):after{display:none}
 
 /* packages: three white cards, three colour hovers */
 .grid3p{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
@@ -181,15 +192,16 @@ section.stepband .steps .step p{color:rgba(242,246,246,.85)}
 .q figcaption{display:flex;align-items:center;gap:12px;margin-top:24px}
 .q .av{width:46px;height:46px;border-radius:50%;object-fit:cover;display:block;flex:none;background:#eef2f0}
 .q .who{display:flex;flex-direction:column}.q .who b{font-size:14px}.q .who span{font-size:12.5px;color:var(--ink3)}
-.allc{text-align:center;margin-top:38px}
-.allc a{font-weight:700;font-size:15px;color:var(--act);border-bottom:2px solid var(--act);padding-bottom:4px}
+.allc{text-align:left;margin-top:26px}
+.allc a{font-weight:600;font-size:14px;color:var(--act);border-bottom:0;padding-bottom:0}
+.allc a:hover{color:var(--act2)}
 
 /* cta band: the dark evergreen close, white button the brightest thing on it */
-.ctaband{padding:clamp(30px,5vw,60px) 0 clamp(60px,8vw,110px)}
-.ctapanel{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--dark),var(--dark2));border-radius:20px;text-align:center;padding:clamp(50px,7vw,86px) 30px;color:#F2F6F6}
+.ctaband{padding:0;background:linear-gradient(160deg,var(--dark),var(--dark2))}
+.ctapanel{position:relative;overflow:visible;background:none;border-radius:0;text-align:left;padding:clamp(70px,9vw,110px) 0;color:#F2F6F6}
 .ctapanel .cg{display:none}
-.ctapanel h2{position:relative;font-size:clamp(30px,4.6vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1.04}
-.ctapanel .btn{position:relative;margin-top:28px;background:#fff;color:var(--dark)}
+.ctapanel h2{position:relative;font-size:clamp(30px,4.2px,56px);font-size:clamp(30px,4.2vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1.04;max-width:none}
+.ctapanel .btn{position:relative;margin-top:32px;background:#fff;color:var(--dark)}
 .ctapanel .btn:hover{background:#DCEDE4}
 
 /* footer: evergreen ground */
@@ -212,7 +224,7 @@ section.stepband .steps .step p{color:rgba(242,246,246,.85)}
 .phero .lead{font-size:clamp(17px,2vw,21px);color:var(--ink2);max-width:62ch;margin:24px 0 0;line-height:1.6}
 .phero .badge{color:var(--act)}
 .sec-pad{padding:clamp(50px,7vw,96px) 0}
-.shead.left{max-width:none;margin:0 0 clamp(34px,4vw,52px);text-align:left;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px}
+.shead.left{max-width:none;margin:0 0 clamp(30px,4vw,44px);text-align:left;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:0;padding-bottom:0}
 .shead.left h2{margin-top:0}.shead.left .kick{order:2}
 
 /* services detail */
