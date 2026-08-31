@@ -86,7 +86,7 @@ nav .btn.g:hover{background:#DCEDE4}
 .glow{display:none}
 .hero .in{position:relative;width:100%}
 .hero h1{font-size:clamp(44px,5.6vw,78px);font-weight:600;letter-spacing:-.035em;line-height:1.04;margin:clamp(34px,4.5vw,52px) 0 0;white-space:nowrap;color:#F2F6F6}
-.hero h1 .g{background:none;-webkit-text-fill-color:currentColor;color:var(--mint)}
+.hero h1 .g{background:none;-webkit-text-fill-color:currentColor;color:#7FE0B8}
 .hsub{display:none}
 .hpara{font-size:18px;line-height:1.65;color:rgba(242,246,246,.92);max-width:56ch;margin:20px 0 0}
 .hcta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
@@ -156,7 +156,7 @@ h2 .t-blue{color:var(--blue)}
   background:linear-gradient(105deg,rgba(1,38,38,.95) 0%,rgba(1,38,38,.8) 40%,rgba(1,38,38,.55) 100%)}
 .stepband .wrap{position:relative;z-index:2}
 .stepband .shead h2{color:#F2F6F6}
-.stepband .shead h2 .g{color:var(--mint)}
+.stepband .shead h2 .g{color:#7FE0B8}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--hair-d)}
 .steps .step{padding:30px 30px 6px 0}
 .steps .step:not(:first-child){border-left:1px solid var(--hair-d);padding-left:30px}
