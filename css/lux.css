@@ -197,7 +197,13 @@ section.stepband .steps .step p{color:rgba(242,246,246,.85)}
 .allc a:hover{color:var(--act2)}
 
 /* cta band: the dark evergreen close, white button the brightest thing on it */
-.ctaband{padding:0;background:linear-gradient(160deg,var(--dark),var(--dark2))}
+/* the close carries its own photograph: the foggy ridgelines, third of the
+   three mountains, under a heavier veil so the white button stays the
+   brightest thing on it */
+.ctaband{position:relative;overflow:hidden;padding:0;background:linear-gradient(160deg,var(--dark),var(--dark2))}
+.ctaband .band-img{filter:grayscale(1) contrast(1.05) brightness(.95);object-position:center 75%}
+.ctaband .band-veil{background:linear-gradient(105deg,rgba(1,38,38,.9) 0%,rgba(1,38,38,.58) 45%,rgba(1,38,38,.18) 100%)}
+.ctaband .wrap{position:relative;z-index:2}
 .ctapanel{position:relative;overflow:visible;background:none;border-radius:0;text-align:left;padding:clamp(70px,9vw,110px) 0;color:#F2F6F6}
 .ctapanel .cg{display:none}
 .ctapanel h2{position:relative;font-size:clamp(30px,4.2px,56px);font-size:clamp(30px,4.2vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1.04;max-width:none}
