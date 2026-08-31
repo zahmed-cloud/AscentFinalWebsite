@@ -90,7 +90,7 @@ export function articleHTML(p,bodyHTML){
 <meta name="twitter:title" content="${esc(p.title)} — Ascent">
 <meta name="twitter:description" content="${esc(p.excerpt)}">
 <meta name="twitter:image" content="https://getascent.co/assets/blog/${p.slug}.png">
-<meta name="theme-color" content="#fbfaf8">
+<meta name="theme-color" content="#ffffff">
 <script type="application/ld+json">${jsonld}<\/script>${faqld}
 </head>
 <body>

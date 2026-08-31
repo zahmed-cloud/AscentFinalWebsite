@@ -101,7 +101,7 @@ nav .btn.g:hover{background:#DCEDE4}
 /* ---- sections ------------------------------------------------------------ */
 section{padding:clamp(60px,8vw,110px) 0;background:#fff}
 .shead{max-width:720px;margin:0 auto clamp(40px,5vw,64px);text-align:center}
-.kick{display:none}
+.kick{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block}
 .shead h2{font-size:clamp(30px,4.4vw,52px);font-weight:600;letter-spacing:-.03em;margin-top:0;line-height:1.08}
 h2 .t-green,.shead h2 .g{color:var(--act)}
 h2 .t-red{color:var(--red)}
@@ -157,17 +157,21 @@ h2 .t-blue{color:var(--blue)}
 .stepband .wrap{position:relative;z-index:2}
 .stepband .shead h2{color:#F2F6F6}
 .stepband .shead h2 .g{color:#7FE0B8}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--hair-d)}
+/* Steps default to a LIGHT ground (how-we-work) and the stepband overrides
+   for the photograph. The first cut had this backwards and put mint numbers
+   and white-alpha hairlines on a white page. */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
 .steps .step{padding:30px 30px 6px 0}
-.steps .step:not(:first-child){border-left:1px solid var(--hair-d);padding-left:30px}
+.steps .step:not(:first-child){border-left:1px solid var(--line);padding-left:30px}
 .step{position:relative}
-.step .stepn{font-family:var(--mono);font-size:13px;color:var(--mint);font-weight:600}
+.step .stepn{font-family:var(--mono);font-size:13px;color:var(--blue);font-weight:600}
 .step h3{font-size:20px;font-weight:600;letter-spacing:-.02em;margin:12px 0 8px}
-.step p{font-size:14.5px;line-height:1.55;color:rgba(242,246,246,.85)}
-.stepband .step p{color:rgba(242,246,246,.85)}
-section .steps .step p{color:var(--ink2)}
-section.stepband .steps .step p{color:rgba(242,246,246,.85)}
+.step p{font-size:14.5px;line-height:1.55;color:var(--ink2)}
 .step:not(:last-child):after{display:none}
+.stepband .steps{border-top-color:var(--hair-d)}
+.stepband .steps .step:not(:first-child){border-left-color:var(--hair-d)}
+.stepband .step .stepn{color:var(--mint)}
+.stepband .step p{color:rgba(242,246,246,.85)}
 
 /* packages: three white cards, three colour hovers */
 .grid3p{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
