@@ -80,7 +80,7 @@ nav .btn.g:hover{background:#DCEDE4}
   min-height:100vh;min-height:100svh;display:flex;align-items:center;
   padding:150px 0 clamp(56px,8vw,96px);color:#F2F6F6}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;
-  filter:grayscale(1) contrast(.9) brightness(.72)}
+  filter:grayscale(1) contrast(.9) brightness(.78)}
 .hero-veil{position:absolute;inset:0;
   background:linear-gradient(105deg,rgba(1,38,38,.97) 0%,rgba(1,38,38,.85) 36%,rgba(1,38,38,.42) 72%,rgba(0,51,42,.6) 100%)}
 .glow{display:none}
@@ -151,7 +151,7 @@ h2 .t-blue{color:var(--blue)}
 /* steps: these sit on the ridge-above-the-clouds photo band */
 .stepband{position:relative;overflow:hidden;background:var(--dark);color:#F2F6F6}
 .band-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;
-  filter:grayscale(1) contrast(.9) brightness(.7)}
+  filter:grayscale(1) contrast(.9) brightness(.76)}
 .band-veil{position:absolute;inset:0;
   background:linear-gradient(105deg,rgba(1,38,38,.95) 0%,rgba(1,38,38,.8) 40%,rgba(1,38,38,.55) 100%)}
 .stepband .wrap{position:relative;z-index:2}
@@ -171,7 +171,7 @@ h2 .t-blue{color:var(--blue)}
 .stepband .steps{border-top-color:var(--hair-d)}
 .stepband .steps .step:not(:first-child){border-left-color:var(--hair-d)}
 .stepband .step .stepn{color:var(--mint)}
-.stepband .step p{color:rgba(242,246,246,.85)}
+.stepband .step p{color:rgba(242,246,246,.92)}
 
 /* packages: three white cards, three colour hovers */
 .grid3p{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
@@ -218,11 +218,11 @@ h2 .t-blue{color:var(--blue)}
 .ft{border-top:0;background:var(--dark);color:#F2F6F6;padding:clamp(44px,5vw,66px) 0 40px}
 .fgrid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:30px}
 .ft .brand{font-size:24px;margin-bottom:14px;color:#fff}
-.ft .fb p{font-size:14px;color:rgba(242,246,246,.8);max-width:30ch;line-height:1.55}
+.ft .fb p{font-size:14px;color:rgba(242,246,246,.88);max-width:30ch;line-height:1.55}
 .fc h4{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mint);margin-bottom:14px}
-.fc a,.fc p{display:block;font-size:14px;color:rgba(242,246,246,.85);margin-bottom:9px}
+.fc a,.fc p{display:block;font-size:14px;color:rgba(242,246,246,.92);margin-bottom:9px}
 .fc a:hover{color:#fff}
-.fbot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:rgba(242,246,246,.7);border-top:1px solid var(--hair-d);margin-top:42px;padding-top:24px}
+.fbot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:rgba(242,246,246,.8);border-top:1px solid var(--hair-d);margin-top:42px;padding-top:24px}
 @media(max-width:900px){.grid3,.grid3s,.grid3p,.grid3q,.steps,.fgrid{grid-template-columns:1fr}.step:after{display:none}}
 @media(max-width:900px) and (min-width:560px){.grid3s{grid-template-columns:1fr 1fr}}
 
@@ -254,7 +254,7 @@ h2 .t-blue{color:var(--blue)}
 .story h2{font-size:clamp(26px,3.4vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1.06}
 .story p{font-size:clamp(16px,1.9vw,19px);line-height:1.65;color:var(--ink2)}.story p b{color:var(--ink)}
 .founder{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,44px);align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--rad);box-shadow:none;padding:clamp(28px,4vw,44px)}
-.founder .ph img{width:150px;height:150px;border-radius:16px;object-fit:cover;display:block;filter:grayscale(1) contrast(.95)}
+.founder .ph img{width:150px;height:150px;border-radius:16px;object-fit:cover;display:block}
 .founder h3{font-size:26px;font-weight:600;letter-spacing:-.02em}
 .founder .role{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--act);text-transform:uppercase;margin:6px 0 16px}
 .founder p{font-size:15.5px;line-height:1.6;color:var(--ink2);margin-bottom:12px}
@@ -396,8 +396,8 @@ h2 .t-blue{color:var(--blue)}
 
 /* ===== slow reveals, gated on script + motion preference ===== */
 @media (prefers-reduced-motion: no-preference){
-  .js .rv{opacity:0;transform:translateY(28px);
-    transition:opacity .9s cubic-bezier(.22,.61,.21,1),transform .9s cubic-bezier(.22,.61,.21,1)}
+  .js .rv{opacity:0;transform:translateY(16px);
+    transition:opacity .5s cubic-bezier(.22,.61,.21,1),transform .5s cubic-bezier(.22,.61,.21,1)}
   .js .rv.in{opacity:1;transform:none}
 }
 

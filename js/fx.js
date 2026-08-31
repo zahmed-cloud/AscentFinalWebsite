@@ -28,10 +28,10 @@
       var kin = [].filter.call(e.target.parentElement.children, function (c) {
         return c.classList.contains("rv");
       });
-      e.target.style.transitionDelay = Math.min(kin.indexOf(e.target), 5) * 90 + "ms";
+      e.target.style.transitionDelay = Math.min(kin.indexOf(e.target), 4) * 60 + "ms";
       e.target.classList.add("in");
       io.unobserve(e.target);
     });
-  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  }, { threshold: 0.05, rootMargin: "0px 0px 80px 0px" });
   targets.forEach(function (el) { io.observe(el); });
 })();
