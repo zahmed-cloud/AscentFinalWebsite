@@ -94,14 +94,16 @@ nav .btn.g:hover{background:#DCEDE4}
 .hero .btn.g:hover{background:#DCEDE4}
 .hero .btn.o{color:#F2F6F6;border-color:var(--hair-d)}
 .hero .btn.o:hover{background:var(--act);border-color:var(--act);color:#fff}
-.hstrip{margin-top:56px;display:flex;gap:14px 28px;flex-wrap:wrap}
-.hstrip a{--hc:var(--red);display:flex;align-items:center;gap:14px;padding:15px 24px 17px 18px;
-  font-size:16px;font-weight:500;color:#F2F6F6;text-decoration:none;
-  border-bottom:2px solid var(--hc);transition:background .3s ease}
+.hstrip{margin-top:52px;display:flex;gap:10px 20px;flex-wrap:wrap}
+.hstrip a{--hc:var(--red);position:relative;display:flex;align-items:center;gap:9px;
+  padding:9px 15px 11px 12px;font-size:14px;font-weight:500;color:#F2F6F6;text-decoration:none;
+  border-bottom:2px solid var(--hc);border-radius:8px 8px 0 0;overflow:hidden;isolation:isolate}
+.hstrip a::before{content:"";position:absolute;inset:0;background:var(--hc);z-index:-1;
+  transform:scaleY(0);transform-origin:bottom;transition:transform .35s cubic-bezier(.22,.61,.21,1)}
 .hstrip a:nth-child(3n+2){--hc:var(--blue)}
 .hstrip a:nth-child(3n){--hc:var(--act2)}
-.hstrip a:hover{background:var(--hc);color:#fff}
-.hstrip a .arw{font-size:17px;line-height:1}
+.hstrip a:hover::before{transform:scaleY(1)}
+.hstrip a .arw{font-size:14px;line-height:1}
 
 /* ---- sections ------------------------------------------------------------ */
 section{padding:clamp(60px,8vw,110px) 0;background:#fff}
