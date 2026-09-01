@@ -230,7 +230,12 @@ h2 .t-blue{color:var(--blue)}
 .fc a,.fc p{display:block;font-size:14px;color:rgba(242,246,246,.92);margin-bottom:9px}
 .fc a:hover{color:#fff}
 .fbot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:rgba(242,246,246,.8);border-top:1px solid var(--hair-d);margin-top:42px;padding-top:24px}
-@media(max-width:900px){.grid3,.grid3s,.grid3p,.grid3q,.steps,.fgrid{grid-template-columns:1fr}.step:after{display:none}}
+@media(max-width:900px){.grid3,.grid3s,.grid3p,.grid3q,.steps,.fgrid{grid-template-columns:1fr}.step:after{display:none}
+  /* stacked: the desktop column dividers become row dividers, no indent */
+  .grid3 .pcard:not(:first-child){border-left:0;padding-left:0;border-top:1px solid var(--line)}
+  .steps .step:not(:first-child){border-left:0;padding-left:0;border-top:1px solid var(--line)}
+  .stepband .steps .step:not(:first-child){border-top-color:var(--hair-d)}
+  .scard .ar{grid-column:3;grid-row:1;justify-self:end}}
 @media(max-width:900px) and (min-width:560px){.grid3s{grid-template-columns:1fr 1fr}}
 
 /* ===== inner page hero: white ground, ink headline ===== */
