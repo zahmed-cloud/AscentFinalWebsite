@@ -9,7 +9,7 @@
       "updated": "2026-09-01",
       "excerpt": "The honest numbers behind a healthy outbound motion, and the point in the funnel where most teams actually lose.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/outbound-benchmarks-2026.png",
+      "cover": "assets/blog/outbound-benchmarks-2026.jpg",
       "pinned": false,
       "faq": [
         {
@@ -39,7 +39,7 @@
       "updated": "2026-08-30",
       "excerpt": "Most GTM plans fail on sequence, not effort. Here is the order of operations for the first ninety days.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/gtm-strategy-90-days.png",
+      "cover": "assets/blog/gtm-strategy-90-days.jpg",
       "pinned": false,
       "faq": [
         {
@@ -69,7 +69,7 @@
       "updated": "2026-08-27",
       "excerpt": "The honest comparison, where each channel wins, and why the teams that book most run them as one sequence.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/cold-email-vs-linkedin.png",
+      "cover": "assets/blog/cold-email-vs-linkedin.jpg",
       "pinned": false,
       "faq": [
         {
@@ -99,7 +99,7 @@
       "updated": "2026-08-25",
       "excerpt": "The safe sending numbers for 2026, per inbox and per domain, and why more volume is usually the wrong lever.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/how-many-cold-emails.png",
+      "cover": "assets/blog/how-many-cold-emails.jpg",
       "pinned": false,
       "faq": [
         {
@@ -129,7 +129,7 @@
       "updated": "2026-08-22",
       "excerpt": "Every box that has to be ticked before copy matters: authentication, warmup, list hygiene, volume and monitoring.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/email-deliverability-checklist.png",
+      "cover": "assets/blog/email-deliverability-checklist.jpg",
       "pinned": false,
       "faq": [
         {
@@ -159,7 +159,7 @@
       "updated": "2026-08-20",
       "excerpt": "The revenue stages, the signals you are ready, and the situations where hiring an agency would waste your money.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/when-to-hire-gtm-agency.png",
+      "cover": "assets/blog/when-to-hire-gtm-agency.jpg",
       "pinned": false,
       "faq": [
         {
@@ -189,7 +189,7 @@
       "updated": "2026-08-18",
       "excerpt": "Two different jobs, two different bets. How to decide where your first paid budget actually belongs.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/linkedin-ads-vs-google-ads.png",
+      "cover": "assets/blog/linkedin-ads-vs-google-ads.jpg",
       "pinned": false,
       "faq": [
         {
@@ -219,7 +219,7 @@
       "updated": "2026-08-15",
       "excerpt": "One of these gets reach, replies and trust. The other posts into a void. The data and the reasons why.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/founder-brand-vs-company-page.png",
+      "cover": "assets/blog/founder-brand-vs-company-page.jpg",
       "pinned": false,
       "faq": [
         {
@@ -249,7 +249,7 @@
       "updated": "2026-08-12",
       "excerpt": "The five leaks that separate a website that looks fine from one that books calls, and the order to fix them.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/b2b-website-conversion.png",
+      "cover": "assets/blog/b2b-website-conversion.jpg",
       "pinned": false,
       "faq": [
         {
@@ -279,7 +279,7 @@
       "updated": "2026-08-10",
       "excerpt": "Where AI genuinely helps a cold outreach motion, where it quietly ruins one, and the line between the two.",
       "alt": "Evergreen cover with the article title on a mountain gradient",
-      "cover": "assets/blog/ai-in-b2b-outbound.png",
+      "cover": "assets/blog/ai-in-b2b-outbound.jpg",
       "pinned": false,
       "faq": [
         {
@@ -309,7 +309,7 @@
       "updated": "2026-08-09",
       "excerpt": "Juggling five specialists feels efficient and quietly isn't. Pipeline leaks in the gaps no vendor owns.",
       "alt": "Five outlined squares converging on one filled mulberry square, Swiss composition",
-      "cover": "assets/blog/one-partner-vs-vendors.png",
+      "cover": "assets/blog/one-partner-vs-vendors.jpg",
       "pinned": true,
       "faq": [
         {
@@ -339,7 +339,7 @@
       "updated": "2026-08-09",
       "excerpt": "The seven questions that separate a real outbound partner from a retainer that quietly burns your budget.",
       "alt": "Checklist rows with one row highlighted in mulberry, Swiss composition",
-      "cover": "assets/blog/choose-outbound-agency.png",
+      "cover": "assets/blog/choose-outbound-agency.jpg",
       "pinned": true,
       "faq": [
         {
@@ -369,7 +369,7 @@
       "updated": "2026-08-09",
       "excerpt": "Fix it in the right order — deliverability, then targeting, then the ask — or you'll fix the wrong thing.",
       "alt": "Three stacked bars narrowing into a funnel, Swiss composition",
-      "cover": "assets/blog/cold-email-not-booking.png",
+      "cover": "assets/blog/cold-email-not-booking.jpg",
       "pinned": true,
       "faq": [
         {
@@ -403,7 +403,7 @@
       "updated": "2026-08-09",
       "excerpt": "Real retainer and per-meeting ranges for 2026, and why pay-per-lead pricing works against you.",
       "alt": "Ascending bar chart in mulberry tones, Swiss composition",
-      "cover": "assets/blog/lead-gen-agency-cost.png",
+      "cover": "assets/blog/lead-gen-agency-cost.jpg",
       "pinned": true,
       "faq": [
         {
@@ -433,7 +433,7 @@
       "updated": "2026-08-09",
       "excerpt": "The honest maths on cost, ramp and risk — and the exact stage where hiring in-house finally wins.",
       "alt": "Two columns of bars, one filled mulberry and one outlined, Swiss composition",
-      "cover": "assets/blog/outbound-agency-vs-sdr.png",
+      "cover": "assets/blog/outbound-agency-vs-sdr.jpg",
       "pinned": true,
       "faq": [
         {
@@ -466,7 +466,7 @@
       "iso": "2026-05-28",
       "excerpt": "How to tell whether your outbound is filling the calendar or just filling the report.",
       "alt": "Calendar grid with filled cells, Swiss composition",
-      "cover": "assets/blog/booked-calls.png",
+      "cover": "assets/blog/booked-calls.jpg",
       "pinned": true
     },
     {
@@ -477,7 +477,7 @@
       "iso": "2026-04-09",
       "excerpt": "A dashboard is only as honest as the fields your team fills in without being asked.",
       "alt": "Ledger rows with one highlighted, Swiss composition",
-      "cover": "assets/blog/crm-you-can-trust.png",
+      "cover": "assets/blog/crm-you-can-trust.jpg",
       "pinned": true
     },
     {
@@ -488,7 +488,7 @@
       "iso": "2026-03-17",
       "excerpt": "Spend amplifies whatever is already true about your funnel, including the broken parts.",
       "alt": "Amplifying bars, Swiss composition",
-      "cover": "assets/blog/paid-ads-louder.png",
+      "cover": "assets/blog/paid-ads-louder.jpg",
       "pinned": true
     },
     {
@@ -499,7 +499,7 @@
       "iso": "2026-02-24",
       "excerpt": "Most go-to-market plans stall because they are trying to sell to everyone at once.",
       "alt": "Concentric target rings, Swiss composition",
-      "cover": "assets/blog/pick-one-icp.png",
+      "cover": "assets/blog/pick-one-icp.jpg",
       "pinned": true
     },
     {
@@ -510,7 +510,7 @@
       "iso": "2026-02-03",
       "excerpt": "The founder content that actually moves pipeline reads like a working note, not a keynote.",
       "alt": "Grid of squares with one filled, Swiss composition",
-      "cover": "assets/blog/post-like-an-operator.png",
+      "cover": "assets/blog/post-like-an-operator.jpg",
       "pinned": true
     },
     {
@@ -521,7 +521,7 @@
       "iso": "2026-01-12",
       "excerpt": "Your first sentence has two jobs: prove you did the work, and cost the reader nothing.",
       "alt": "Abstract type bars, Swiss composition",
-      "cover": "assets/blog/cold-email-opener.png",
+      "cover": "assets/blog/cold-email-opener.jpg",
       "pinned": true
     }
   ]
