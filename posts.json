@@ -1,6 +1,306 @@
 {
   "posts": [
     {
+      "slug": "outbound-benchmarks-2026",
+      "title": "B2B outbound benchmarks for 2026: reply, meeting and close rates",
+      "category": "Outbound",
+      "date": "01 Sep 2026",
+      "iso": "2026-09-01",
+      "updated": "2026-09-01",
+      "excerpt": "The honest numbers behind a healthy outbound motion, and the point in the funnel where most teams actually lose.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/outbound-benchmarks-2026.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "What is a good cold email reply rate in 2026?",
+          "a": "Across the campaigns we run, a healthy cold email campaign lands somewhere between a 2% and 6% reply rate once deliverability is solid and the list is tight. Under 1% almost always means a list, deliverability or relevance problem rather than a copy problem."
+        },
+        {
+          "q": "How many positive replies become booked meetings?",
+          "a": "Roughly half of positive replies should turn into a booked call if you reply fast and make booking frictionless. If you are losing more than that between the reply and the calendar, the leak is your speed and your booking flow, not your targeting."
+        },
+        {
+          "q": "What close rate should I expect from outbound meetings?",
+          "a": "Outbound-sourced meetings typically close at a lower rate than referrals, often somewhere between 10% and 25% depending on deal size and how qualified the meeting definition is. The fix for a low close rate is usually a tighter qualified-meeting definition, not more meetings."
+        },
+        {
+          "q": "Why are my outbound numbers below benchmark?",
+          "a": "Work backwards through the funnel one stage at a time. Low replies point to list, deliverability or message relevance. Low meetings from good replies point to response speed and booking friction. Low closes from real meetings point to qualification. Fix the single worst stage before touching anything else."
+        }
+      ]
+    },
+    {
+      "slug": "gtm-strategy-90-days",
+      "title": "The 90-day B2B go-to-market plan, in the order that actually works",
+      "category": "GTM Strategy",
+      "date": "30 Aug 2026",
+      "iso": "2026-08-30",
+      "updated": "2026-08-30",
+      "excerpt": "Most GTM plans fail on sequence, not effort. Here is the order of operations for the first ninety days.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/gtm-strategy-90-days.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "What should a 90-day go-to-market plan include?",
+          "a": "Month one is foundations: one ICP, positioning, messaging, and the technical setup for outbound. Month two is launch: outbound live, founder content publishing, and a working CRM. Month three is tuning: doubling down on the messages and segments that got real replies, and killing the rest. The order matters more than the volume of activity."
+        },
+        {
+          "q": "How long does it take to see results from a new GTM motion?",
+          "a": "Expect the first real signal, replies and booked conversations, in weeks three to six once sending starts. Expect pipeline you can forecast from around month three. Anyone promising a full pipeline in the first fortnight from a cold start is pricing in your disappointment."
+        },
+        {
+          "q": "Should I start outbound or content first?",
+          "a": "Start them together but weight the effort to outbound. Outbound produces conversations and learning fastest, while founder content warms the same buyers over time. Content alone is too slow for a 90-day window, and outbound alone leaves your buyers with nothing to check you against when they look you up."
+        },
+        {
+          "q": "What is the biggest mistake in a GTM launch?",
+          "a": "Launching channels before choosing one ICP. When the audience is fuzzy, every downstream decision is a guess, results cannot be read cleanly, and nothing learned in month one compounds into month two. Strategy first is slower for a week and faster for a year."
+        }
+      ]
+    },
+    {
+      "slug": "cold-email-vs-linkedin",
+      "title": "Cold email vs LinkedIn outreach: which books more B2B meetings?",
+      "category": "Outbound",
+      "date": "27 Aug 2026",
+      "iso": "2026-08-27",
+      "updated": "2026-08-27",
+      "excerpt": "The honest comparison, where each channel wins, and why the teams that book most run them as one sequence.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/cold-email-vs-linkedin.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "Is cold email or LinkedIn better for B2B lead generation?",
+          "a": "Neither wins alone. Cold email wins on volume and scale, LinkedIn wins on warmth and reply quality. The teams that book the most meetings run both against the same list in one sequence, so a prospect sees a familiar name in the inbox and a face on the connection request in the same week."
+        },
+        {
+          "q": "How many LinkedIn messages can I safely send per day?",
+          "a": "LinkedIn tolerates far less volume than email. Sustainable motions stay around 20 to 25 connection requests a day per account, with messages only to accepted connections. Pushing past platform limits gets accounts restricted, and a restricted founder account costs more than any campaign gains."
+        },
+        {
+          "q": "Why do my LinkedIn messages get more replies than my cold emails?",
+          "a": "A LinkedIn message arrives with a face, a headline and shared context attached, so trust starts higher than a cold inbox. The trade is volume: you can send thousands of emails a week but only hundreds of LinkedIn touches. That is why quality-per-touch favours LinkedIn while total meetings usually favour the combined sequence."
+        },
+        {
+          "q": "Should the founder do their own LinkedIn outreach?",
+          "a": "Sends from the founder's profile outperform sends from junior accounts because seniority earns replies from seniority. The work can be systematised behind the scenes, but the name and face on the message should be the most credible person in the company."
+        }
+      ]
+    },
+    {
+      "slug": "how-many-cold-emails",
+      "title": "How many cold emails should you actually send per day?",
+      "category": "Outbound",
+      "date": "25 Aug 2026",
+      "iso": "2026-08-25",
+      "updated": "2026-08-25",
+      "excerpt": "The safe sending numbers for 2026, per inbox and per domain, and why more volume is usually the wrong lever.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/how-many-cold-emails.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "How many cold emails can I send per day without hurting deliverability?",
+          "a": "Keep each sending inbox between 20 and 40 cold sends a day in 2026, on top of natural warmup activity. Scale comes from adding inboxes and domains, not from pushing one inbox harder. A single inbox blasting 200 a day is how domains end up burned."
+        },
+        {
+          "q": "How do I scale cold email volume safely?",
+          "a": "Horizontally. Multiple secondary domains, two to three inboxes per domain, each inbox held at safe daily volume. A motion sending 1,000 emails a day is typically 30 or more inboxes across 10 to 15 domains, every one of them warmed for two to three weeks before real sending."
+        },
+        {
+          "q": "Should I send cold emails from my main company domain?",
+          "a": "No. Cold outreach belongs on separate secondary domains that redirect to your main site, so your primary domain's reputation is never at risk. Losing deliverability on the domain your invoices, proposals and support emails come from is a business problem, not a marketing problem."
+        },
+        {
+          "q": "Does sending fewer, better emails really work?",
+          "a": "Volume and quality are not actually in tension: the safe ceiling per inbox forces quality on you. Within the same daily budget of sends, a tightly researched list with a specific message consistently produces more meetings than a bigger, blunter blast. Spend the constraint on relevance."
+        }
+      ]
+    },
+    {
+      "slug": "email-deliverability-checklist",
+      "title": "The cold email deliverability checklist for 2026",
+      "category": "Outbound",
+      "date": "22 Aug 2026",
+      "iso": "2026-08-22",
+      "updated": "2026-08-22",
+      "excerpt": "Every box that has to be ticked before copy matters: authentication, warmup, list hygiene, volume and monitoring.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/email-deliverability-checklist.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "Why are my cold emails going to spam?",
+          "a": "Usually one of five reasons: missing or broken authentication (SPF, DKIM, DMARC), unwarmed inboxes sending too much too soon, a list full of invalid addresses producing bounces, volume past safe ceilings, or spam-trigger content. Work through them in that order; authentication and list quality explain most cases."
+        },
+        {
+          "q": "What are SPF, DKIM and DMARC and do I need all three?",
+          "a": "They are DNS records that prove your emails genuinely come from your domain. SPF lists who may send for you, DKIM cryptographically signs each message, DMARC tells receivers what to do when checks fail. In 2026 the major providers effectively require all three for bulk senders; missing any of them costs inbox placement."
+        },
+        {
+          "q": "How long should I warm up a new email domain?",
+          "a": "Two to three weeks minimum before real cold sending, ramping gradually, and keep warmup running in the background afterwards. Sending real volume from a cold domain on day one is the fastest way to burn it permanently."
+        },
+        {
+          "q": "How do I check if my emails are landing in spam?",
+          "a": "Use inbox placement tests that seed your sends across real mailboxes, monitor bounce rates and reply rates per inbox, and check Google Postmaster Tools for domain reputation. A sudden silence across a previously healthy campaign is almost always a placement problem, not a message problem."
+        }
+      ]
+    },
+    {
+      "slug": "when-to-hire-gtm-agency",
+      "title": "When to hire a GTM agency, and when you genuinely should not",
+      "category": "GTM Strategy",
+      "date": "20 Aug 2026",
+      "iso": "2026-08-20",
+      "updated": "2026-08-20",
+      "excerpt": "The revenue stages, the signals you are ready, and the situations where hiring an agency would waste your money.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/when-to-hire-gtm-agency.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "At what stage should a B2B company hire a GTM agency?",
+          "a": "The sweet spot is roughly £1M to £20M ARR: you have proof the product sells, founder-led sales is hitting its ceiling, and you cannot yet justify a full in-house growth team. Below that, the founder still needs to be in the sales conversations, learning. Above it, in-house usually wins on cost."
+        },
+        {
+          "q": "What are the signs you are ready for a GTM agency?",
+          "a": "You have closed real customers and can name who buys and why. The founder's network is running dry as a pipeline source. Leads arrive but nobody owns the system that produces them. And you can commit to a quarter of consistent execution, because no serious motion shows its worth in three weeks."
+        },
+        {
+          "q": "When is hiring a GTM agency a mistake?",
+          "a": "Before product-market fit, when what you need is customer conversations, not campaigns. When you want to outsource the whole problem and disengage, because positioning and sales still need the founder. And when cash flow cannot sustain three months of consistent effort, because stop-start execution burns money and proves nothing."
+        },
+        {
+          "q": "Should I hire a GTM agency or build an in-house team first?",
+          "a": "First hires in-house typically cost more and take longer than an agency engagement: a competent growth hire plus tools runs far past a retainer, and takes months to show output. The pragmatic path for most companies is agency first for speed and system-building, then bringing it in-house once scale justifies headcount. We compare the numbers in our agency vs SDR breakdown."
+        }
+      ]
+    },
+    {
+      "slug": "linkedin-ads-vs-google-ads",
+      "title": "LinkedIn Ads vs Google Ads for B2B: where the first pound goes",
+      "category": "Paid",
+      "date": "18 Aug 2026",
+      "iso": "2026-08-18",
+      "updated": "2026-08-18",
+      "excerpt": "Two different jobs, two different bets. How to decide where your first paid budget actually belongs.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/linkedin-ads-vs-google-ads.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "Should a B2B company start with LinkedIn Ads or Google Ads?",
+          "a": "Start where your buyer already is. If people actively search for your category, capture that intent on Google first, because searchers are closer to buying. If nobody searches for what you do, or the searchers are the wrong people, LinkedIn's targeting by role, industry and company size is the better first bet."
+        },
+        {
+          "q": "Why are LinkedIn Ads so expensive?",
+          "a": "You pay for targeting precision: reaching a named role at a named company size in a named industry costs more per click than reaching a keyword. The clicks are dearer but the audience is exact, which is why LinkedIn suits considered, higher-value B2B offers rather than impulse purchases."
+        },
+        {
+          "q": "Do Google Ads work for niche B2B products?",
+          "a": "Only if search volume exists. A genuinely new category with no search demand gives Google nothing to capture, and budget leaks into loosely related keywords. Check real search volume for your problem language first; if it is close to zero, create demand on LinkedIn instead of trying to capture demand that does not exist."
+        },
+        {
+          "q": "How much budget do I need to test B2B paid ads properly?",
+          "a": "Enough to buy statistically meaningful clicks for your cost level, which for most B2B accounts means a few thousand pounds a month for a quarter, on one channel, against one segment. Splitting a small budget across two platforms in month one tests nothing properly and proves nothing at all."
+        }
+      ]
+    },
+    {
+      "slug": "founder-brand-vs-company-page",
+      "title": "Founder brand vs company page: which actually grows pipeline?",
+      "category": "Founder Brand",
+      "date": "15 Aug 2026",
+      "iso": "2026-08-15",
+      "updated": "2026-08-15",
+      "excerpt": "One of these gets reach, replies and trust. The other posts into a void. The data and the reasons why.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/founder-brand-vs-company-page.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "Should we post from the founder's profile or the company page?",
+          "a": "The founder's profile, decisively. People follow people: personal profiles earn multiples of the organic reach of company pages for the same content, replies and DMs land person-to-person, and buyers checking you out trust a face over a logo. The company page exists as a credibility checkpoint, not a growth channel."
+        },
+        {
+          "q": "Is a LinkedIn company page useless for B2B?",
+          "a": "Not useless, just miscast. It is the place prospects verify you are real, the anchor for job posts and ads, and a home for announcements. Expecting it to generate pipeline organically is where teams waste quarters; treat it as a shopfront and put the selling voice on the founder."
+        },
+        {
+          "q": "What should a founder post on LinkedIn to generate pipeline?",
+          "a": "Operator content: specific lessons from real work, numbers where possible, opinions the buyer recognises from their own week. Written like a person, not a press release. The goal is that when your cold email lands, the recipient looks you up and finds someone worth replying to."
+        },
+        {
+          "q": "How often should a founder post on LinkedIn?",
+          "a": "Three to five times a week is the working cadence: enough to stay present in the feed and build compounding familiarity with your exact buyers, without the quality collapse that daily-at-all-costs schedules cause. Consistency over months beats intensity over weeks."
+        }
+      ]
+    },
+    {
+      "slug": "b2b-website-conversion",
+      "title": "Why your B2B website gets traffic and no leads",
+      "category": "Ops",
+      "date": "12 Aug 2026",
+      "iso": "2026-08-12",
+      "updated": "2026-08-12",
+      "excerpt": "The five leaks that separate a website that looks fine from one that books calls, and the order to fix them.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/b2b-website-conversion.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "Why does my B2B website get traffic but no conversions?",
+          "a": "Almost always one of five leaks: a homepage that describes the company instead of the buyer's problem, proof that stays vague, a call to action that asks for too much too soon, pages slow enough that visitors leave first, or enquiries that get answered a day late. Diagnose in that order; message and proof explain most of it."
+        },
+        {
+          "q": "What is a good conversion rate for a B2B website?",
+          "a": "For considered B2B services, converting somewhere between 1% and 3% of qualified visitors into a real action, a booked call or a serious enquiry, is a working site. Below that with decent traffic quality, the message, proof or friction is leaking. Chasing double digits usually means counting weak actions as conversions."
+        },
+        {
+          "q": "What should the main call to action be on a B2B site?",
+          "a": "The lowest-friction version of a real sales conversation, which for most services is a booked call on a visible calendar. Long forms qualify nobody; they just filter for patience. Name the action honestly, make it one click from every page, and answer fast when it happens."
+        },
+        {
+          "q": "Do I need to redesign my website to improve conversion?",
+          "a": "Usually not. Most conversion problems are message and proof problems wearing a design costume. Rewriting the homepage in the buyer's words, adding named results, and cutting the form to one step routinely outperforms a full redesign at a fraction of the cost."
+        }
+      ]
+    },
+    {
+      "slug": "ai-in-b2b-outbound",
+      "title": "How to use AI in B2B outbound without sounding like AI",
+      "category": "Outbound",
+      "date": "10 Aug 2026",
+      "iso": "2026-08-10",
+      "updated": "2026-08-10",
+      "excerpt": "Where AI genuinely helps a cold outreach motion, where it quietly ruins one, and the line between the two.",
+      "alt": "Evergreen cover with the article title on a mountain gradient",
+      "cover": "assets/blog/ai-in-b2b-outbound.png",
+      "pinned": false,
+      "faq": [
+        {
+          "q": "Should I use AI to write my cold emails?",
+          "a": "Use it for everything around the email and sparingly inside it. AI is excellent at research, list enrichment, summarising a prospect's world and drafting variants to react against. Fully AI-written sends read as templated because they are, and buyers in 2026 recognise the pattern instantly. The voice that earns replies is a human one."
+        },
+        {
+          "q": "How can buyers tell an email was written by AI?",
+          "a": "The tells are consistent: interchangeable compliments, adjective-heavy praise of the prospect's clearly impressive journey, tidy three-part structures, and relevance that gestures at their company without saying anything only a human who looked would know. One specific observed detail outperforms any amount of generated polish."
+        },
+        {
+          "q": "What are the best uses of AI in outbound?",
+          "a": "Account research at scale, signal detection such as hiring or funding triggers, list building and enrichment, reply triage, CRM hygiene, and drafting internal documents like messaging angles to test. These compress hours of work into minutes without ever touching the prospect-facing voice."
+        },
+        {
+          "q": "Will AI replace SDRs and outbound agencies?",
+          "a": "It replaces the mechanical middle of the job: research, enrichment, data entry, first drafts. It does not replace judgement about who to target, what to say, and how to handle a live conversation with a real buyer. Teams that use AI on the mechanics and humans on the voice outperform both the all-manual and all-automated versions."
+        }
+      ]
+    },
+    {
       "slug": "one-partner-vs-vendors",
       "title": "One GTM partner vs five vendors: why fragmented marketing kills pipeline",
       "category": "GTM Strategy",
@@ -12,10 +312,22 @@
       "cover": "assets/blog/one-partner-vs-vendors.png",
       "pinned": true,
       "faq": [
-        {"q": "Is it better to hire one marketing agency or several specialists?", "a": "For most B2B companies between roughly £1M and £20M ARR, one partner that owns the whole go-to-market beats a roster of specialists. Specialists each optimise their own metric, and pipeline leaks in the handoffs nobody owns. One partner gives you a single system and a single point of accountability."},
-        {"q": "What's wrong with using multiple marketing vendors?", "a": "Nothing individually — the problem is the coordination tax. You become the only person who sees the whole picture, spend gets duplicated, data ends up siloed, and no one is accountable for whether it all produces revenue. Deals leak in the gaps between vendors."},
-        {"q": "When should I consolidate my marketing under one partner?", "a": "Roughly between £1M and £20M ARR. Below that, focus on one channel done well rather than hiring lots of help. Above it, you can afford dedicated in-house specialists with a leader to coordinate them."},
-        {"q": "Does one partner mean putting all my eggs in one basket?", "a": "It concentrates accountability rather than risk. Spreading work across vendors spreads accountability until no one owns the outcome. The thing to get right is choosing the right partner, not hiring more of them."}
+        {
+          "q": "Is it better to hire one marketing agency or several specialists?",
+          "a": "For most B2B companies between roughly £1M and £20M ARR, one partner that owns the whole go-to-market beats a roster of specialists. Specialists each optimise their own metric, and pipeline leaks in the handoffs nobody owns. One partner gives you a single system and a single point of accountability."
+        },
+        {
+          "q": "What's wrong with using multiple marketing vendors?",
+          "a": "Nothing individually — the problem is the coordination tax. You become the only person who sees the whole picture, spend gets duplicated, data ends up siloed, and no one is accountable for whether it all produces revenue. Deals leak in the gaps between vendors."
+        },
+        {
+          "q": "When should I consolidate my marketing under one partner?",
+          "a": "Roughly between £1M and £20M ARR. Below that, focus on one channel done well rather than hiring lots of help. Above it, you can afford dedicated in-house specialists with a leader to coordinate them."
+        },
+        {
+          "q": "Does one partner mean putting all my eggs in one basket?",
+          "a": "It concentrates accountability rather than risk. Spreading work across vendors spreads accountability until no one owns the outcome. The thing to get right is choosing the right partner, not hiring more of them."
+        }
       ]
     },
     {
@@ -30,10 +342,22 @@
       "cover": "assets/blog/choose-outbound-agency.png",
       "pinned": true,
       "faq": [
-        {"q": "How do I choose a B2B outbound agency?", "a": "Judge them on three things: whether they can name real clients and outcomes in your space, whether they own deliverability and targeting rather than just copy, and whether they'll define a qualified meeting the way you do. Ask the seven questions in this guide and watch how directly they answer."},
-        {"q": "What are the red flags of a bad lead generation agency?", "a": "Guaranteed lead numbers from a cold start, no mention of sending infrastructure or deliverability, long lock-in contracts, per-meeting pricing with no quality bar, and refusing to say who actually works on your account."},
-        {"q": "Are outbound agencies worth it, or are they a scam?", "a": "The category has a trust problem because weak agencies book junk meetings and hide behind vanity activity. Good ones are worth it — they get you to pipeline faster than hiring in-house. Vetting questions are how you tell them apart."},
-        {"q": "Should I sign a 12-month contract with an outbound agency?", "a": "Be cautious. A reasonable notice period is fine, but a long lock-in with a heavy exit fee protects the agency, not you. Confident agencies keep you with results, not contract terms."}
+        {
+          "q": "How do I choose a B2B outbound agency?",
+          "a": "Judge them on three things: whether they can name real clients and outcomes in your space, whether they own deliverability and targeting rather than just copy, and whether they'll define a qualified meeting the way you do. Ask the seven questions in this guide and watch how directly they answer."
+        },
+        {
+          "q": "What are the red flags of a bad lead generation agency?",
+          "a": "Guaranteed lead numbers from a cold start, no mention of sending infrastructure or deliverability, long lock-in contracts, per-meeting pricing with no quality bar, and refusing to say who actually works on your account."
+        },
+        {
+          "q": "Are outbound agencies worth it, or are they a scam?",
+          "a": "The category has a trust problem because weak agencies book junk meetings and hide behind vanity activity. Good ones are worth it — they get you to pipeline faster than hiring in-house. Vetting questions are how you tell them apart."
+        },
+        {
+          "q": "Should I sign a 12-month contract with an outbound agency?",
+          "a": "Be cautious. A reasonable notice period is fine, but a long lock-in with a heavy exit fee protects the agency, not you. Confident agencies keep you with results, not contract terms."
+        }
       ]
     },
     {
@@ -48,11 +372,26 @@
       "cover": "assets/blog/cold-email-not-booking.png",
       "pinned": true,
       "faq": [
-        {"q": "Why are my cold emails not booking meetings?", "a": "Work backwards. Low open rates mean a deliverability problem — you're in spam. Good opens but few replies mean a targeting problem — wrong people. Good replies but no meetings mean the ask is wrong — you're asking for too much, too soon. Fix in that order."},
-        {"q": "Why are my cold emails going to spam?", "a": "Usually missing authentication (SPF, DKIM, DMARC), sending from your primary domain, sending too much too fast, or a dirty list with high bounces. Set up authentication, use warmed secondary domains, and keep volume to 20–50 per inbox per day."},
-        {"q": "What's a good cold email reply rate in 2026?", "a": "Around 3–5% is average and 10%+ is strong. Meetings get booked on roughly 1–2% of sends in a healthy campaign. Below average usually points to deliverability or targeting, not copy."},
-        {"q": "Is cold email dead?", "a": "No — sloppy cold email is dead. High-volume, poorly-targeted, badly-delivered email stopped working. Well-targeted email from a healthy domain, asking for a small next step, still books meetings every week."},
-        {"q": "How many cold emails can I send per day?", "a": "Keep it to roughly 20–50 per inbox per day, spread across multiple warmed inboxes and domains. New domains should be warmed for 3–4 weeks first. Blasting hundreds from one inbox is the fastest way into spam."}
+        {
+          "q": "Why are my cold emails not booking meetings?",
+          "a": "Work backwards. Low open rates mean a deliverability problem — you're in spam. Good opens but few replies mean a targeting problem — wrong people. Good replies but no meetings mean the ask is wrong — you're asking for too much, too soon. Fix in that order."
+        },
+        {
+          "q": "Why are my cold emails going to spam?",
+          "a": "Usually missing authentication (SPF, DKIM, DMARC), sending from your primary domain, sending too much too fast, or a dirty list with high bounces. Set up authentication, use warmed secondary domains, and keep volume to 20–50 per inbox per day."
+        },
+        {
+          "q": "What's a good cold email reply rate in 2026?",
+          "a": "Around 3–5% is average and 10%+ is strong. Meetings get booked on roughly 1–2% of sends in a healthy campaign. Below average usually points to deliverability or targeting, not copy."
+        },
+        {
+          "q": "Is cold email dead?",
+          "a": "No — sloppy cold email is dead. High-volume, poorly-targeted, badly-delivered email stopped working. Well-targeted email from a healthy domain, asking for a small next step, still books meetings every week."
+        },
+        {
+          "q": "How many cold emails can I send per day?",
+          "a": "Keep it to roughly 20–50 per inbox per day, spread across multiple warmed inboxes and domains. New domains should be warmed for 3–4 weeks first. Blasting hundreds from one inbox is the fastest way into spam."
+        }
       ]
     },
     {
@@ -67,10 +406,22 @@
       "cover": "assets/blog/lead-gen-agency-cost.png",
       "pinned": true,
       "faq": [
-        {"q": "How much does a B2B lead generation agency cost?", "a": "Most charge £4k–£7k a month on retainer for specialist outbound. Full go-to-market partners run up to around £15k a month. Pay-per-meeting pricing is roughly £150–£600 per booked call."},
-        {"q": "Is pay-per-lead or pay-per-meeting a good deal?", "a": "Usually not. It looks lower-risk, but it pushes the agency to book volume rather than quality, so you pay for meetings that don't convert. Measure cost per qualified opportunity, not cost per booking."},
-        {"q": "Why do outbound agencies charge a monthly retainer?", "a": "Because outbound has real fixed costs — data, sending infrastructure, deliverability and skilled people — and building pipeline is ongoing work, not a one-off. A retainer also aligns the agency to your pipeline rather than to a booking count."},
-        {"q": "What's the cheapest way to do outbound?", "a": "The cheapest sticker price is rarely the cheapest outcome. Underpriced outbound tends to skip infrastructure and targeting, which tanks deliverability and lead quality. Cheap junk meetings cost you most in your team's wasted time."}
+        {
+          "q": "How much does a B2B lead generation agency cost?",
+          "a": "Most charge £4k–£7k a month on retainer for specialist outbound. Full go-to-market partners run up to around £15k a month. Pay-per-meeting pricing is roughly £150–£600 per booked call."
+        },
+        {
+          "q": "Is pay-per-lead or pay-per-meeting a good deal?",
+          "a": "Usually not. It looks lower-risk, but it pushes the agency to book volume rather than quality, so you pay for meetings that don't convert. Measure cost per qualified opportunity, not cost per booking."
+        },
+        {
+          "q": "Why do outbound agencies charge a monthly retainer?",
+          "a": "Because outbound has real fixed costs — data, sending infrastructure, deliverability and skilled people — and building pipeline is ongoing work, not a one-off. A retainer also aligns the agency to your pipeline rather than to a booking count."
+        },
+        {
+          "q": "What's the cheapest way to do outbound?",
+          "a": "The cheapest sticker price is rarely the cheapest outcome. Underpriced outbound tends to skip infrastructure and targeting, which tanks deliverability and lead quality. Cheap junk meetings cost you most in your team's wasted time."
+        }
       ]
     },
     {
@@ -85,11 +436,26 @@
       "cover": "assets/blog/outbound-agency-vs-sdr.png",
       "pinned": true,
       "faq": [
-        {"q": "Is an outbound agency worth it?", "a": "Yes, if you need pipeline quickly and your offer and ICP are clear. An agency gets you to booked meetings in weeks rather than months, with no hiring or attrition risk. It's not worth it if you're using it to avoid figuring out who you sell to."},
-        {"q": "How much does an outbound agency cost per month?", "a": "Most specialist outbound agencies charge £4k–£7k a month. A full go-to-market partner that also owns strategy and infrastructure can run up to around £15k, depending on scope."},
-        {"q": "How long before an agency starts booking meetings?", "a": "Outreach usually starts within 2–4 weeks, once targeting and sending infrastructure are set up. First meetings typically land in the following 30–45 days."},
-        {"q": "When should I hire an in-house SDR instead?", "a": "Once your sales motion is proven, you're past roughly £3–5M ARR, and you have someone to manage and coach the role. Before that, you're paying for ramp and risk on a motion you haven't nailed down yet."},
-        {"q": "Can I run an agency and in-house together?", "a": "Yes, and it's often the smartest setup. Let the agency run top-of-funnel outbound while your team owns qualification and closing, then bring outbound in-house once the playbook is proven."}
+        {
+          "q": "Is an outbound agency worth it?",
+          "a": "Yes, if you need pipeline quickly and your offer and ICP are clear. An agency gets you to booked meetings in weeks rather than months, with no hiring or attrition risk. It's not worth it if you're using it to avoid figuring out who you sell to."
+        },
+        {
+          "q": "How much does an outbound agency cost per month?",
+          "a": "Most specialist outbound agencies charge £4k–£7k a month. A full go-to-market partner that also owns strategy and infrastructure can run up to around £15k, depending on scope."
+        },
+        {
+          "q": "How long before an agency starts booking meetings?",
+          "a": "Outreach usually starts within 2–4 weeks, once targeting and sending infrastructure are set up. First meetings typically land in the following 30–45 days."
+        },
+        {
+          "q": "When should I hire an in-house SDR instead?",
+          "a": "Once your sales motion is proven, you're past roughly £3–5M ARR, and you have someone to manage and coach the role. Before that, you're paying for ramp and risk on a motion you haven't nailed down yet."
+        },
+        {
+          "q": "Can I run an agency and in-house together?",
+          "a": "Yes, and it's often the smartest setup. Let the agency run top-of-funnel outbound while your team owns qualification and closing, then bring outbound in-house once the playbook is proven."
+        }
       ]
     },
     {

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The cold email deliverability checklist for 2026 &mdash; Ascent</title>
+<meta name="description" content="A complete cold email deliverability checklist for 2026: SPF, DKIM, DMARC, warmup, list verification, volume ceilings and the monitoring that keeps you in the inbox.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/lux.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+<link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
+<link rel="canonical" href="https://getascent.co/article-email-deliverability-checklist">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-08-22">
+<meta property="og:site_name" content="Ascent">
+<meta property="og:title" content="The cold email deliverability checklist for 2026 &mdash; Ascent">
+<meta property="og:description" content="A complete cold email deliverability checklist for 2026: SPF, DKIM, DMARC, warmup, list verification, volume ceilings and the monitoring that keeps you in the inbox.">
+<meta property="og:url" content="https://getascent.co/article-email-deliverability-checklist">
+<meta property="og:image" content="https://getascent.co/assets/blog/email-deliverability-checklist.png">
+<meta property="og:image:width" content="1600"><meta property="og:image:height" content="1000">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The cold email deliverability checklist for 2026 &mdash; Ascent">
+<meta name="twitter:description" content="A complete cold email deliverability checklist for 2026: SPF, DKIM, DMARC, warmup, list verification, volume ceilings and the monitoring that keeps you in the inbox.">
+<meta name="twitter:image" content="https://getascent.co/assets/blog/email-deliverability-checklist.png">
+<meta name="theme-color" content="#ffffff">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The cold email deliverability checklist for 2026", "description": "A complete cold email deliverability checklist for 2026: SPF, DKIM, DMARC, warmup, list verification, volume ceilings and the monitoring that keeps you in the inbox.", "datePublished": "2026-08-22", "dateModified": "2026-08-22", "author": {"@type": "Person", "name": "Jamil Ahmed", "url": "https://www.linkedin.com/in/getascent/"}, "publisher": {"@type": "Organization", "name": "Ascent"}, "image": "https://getascent.co/assets/blog/email-deliverability-checklist.png", "mainEntityOfPage": "https://getascent.co/article-email-deliverability-checklist", "url": "https://getascent.co/article-email-deliverability-checklist"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why are my cold emails going to spam?", "acceptedAnswer": {"@type": "Answer", "text": "Usually one of five reasons: missing or broken authentication (SPF, DKIM, DMARC), unwarmed inboxes sending too much too soon, a list full of invalid addresses producing bounces, volume past safe ceilings, or spam-trigger content. Work through them in that order; authentication and list quality explain most cases."}}, {"@type": "Question", "name": "What are SPF, DKIM and DMARC and do I need all three?", "acceptedAnswer": {"@type": "Answer", "text": "They are DNS records that prove your emails genuinely come from your domain. SPF lists who may send for you, DKIM cryptographically signs each message, DMARC tells receivers what to do when checks fail. In 2026 the major providers effectively require all three for bulk senders; missing any of them costs inbox placement."}}, {"@type": "Question", "name": "How long should I warm up a new email domain?", "acceptedAnswer": {"@type": "Answer", "text": "Two to three weeks minimum before real cold sending, ramping gradually, and keep warmup running in the background afterwards. Sending real volume from a cold domain on day one is the fastest way to burn it permanently."}}, {"@type": "Question", "name": "How do I check if my emails are landing in spam?", "acceptedAnswer": {"@type": "Answer", "text": "Use inbox placement tests that seed your sends across real mailboxes, monitor bounce rates and reply rates per inbox, and check Google Postmaster Tools for domain reputation. A sudden silence across a previously healthy campaign is almost always a placement problem, not a message problem."}}]}</script>
+</head>
+<body>
+<nav><div class="wrap navin"><a class="brand" href="/">Ascent<i></i></a><span class="nl"><a href="services">Services</a><a href="industries">Industries</a><a href="about">About</a><a href="results">Case studies</a><a href="blog" class="on">Blog</a></span><a class="btn g" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2jekQFQ5Ny4aO7LEXS1zeKG5qta-lnk4YEx9eosryEtErrGx9ACSKav5i37M6Fj5ukKz2nLF9o?gv=true" target="_blank" rel="noopener">Book a call <span class="arw">&#8594;</span></a></div></nav>
+<header class="phero"><span class="glow a"></span><span class="glow c"></span><div class="wrap in"><span class="badge"><b></b> Outbound</span><h1>The cold email deliverability checklist for 2026</h1><p class="artmeta">By Jamil Ahmed &middot; Outbound &middot; 22 Aug 2026</p></div></header>
+<section class="sec-pad" style="padding-top:0"><div class="wrap"><div class="article-wrap"><img class="acover" src="assets/blog/email-deliverability-checklist.png" alt="The cold email deliverability checklist for 2026" width="1600" height="1000"><article class="prose">
+<p data-r>No subject line survives the spam folder. Before copy, before targeting, before any clever sequence, a cold email motion lives or dies on deliverability, and deliverability is a checklist, not an art. Here is the one we run before a single real email leaves any client's system.</p>
+
+<h2 data-r>Authentication: the non-negotiables</h2>
+<ul>
+<li data-r>SPF record published on every sending domain, listing exactly who may send for it.</li>
+<li data-r>DKIM signing enabled, so every message carries a cryptographic proof of origin.</li>
+<li data-r>DMARC policy in place. Start at monitoring, move to quarantine once reports are clean.</li>
+<li data-r>Custom tracking domain, so your links carry your reputation instead of a shared one.</li>
+</ul>
+<p data-r>Since the big mailbox providers tightened bulk-sender rules, these are not best practice, they are the entry fee. A missing DMARC record in 2026 is a placement penalty you pay on every send.</p>
+
+<h2 data-r>Infrastructure: separate and warm</h2>
+<ul>
+<li data-r>Secondary domains for all cold sending, redirecting to the main site. The primary domain never sends cold.</li>
+<li data-r>Two to three inboxes per domain, 20 to 40 cold sends per inbox per day, as covered in <a href="article-how-many-cold-emails">the volume guide</a>.</li>
+<li data-r>Two to three weeks of warmup before real sending, and warmup stays on afterwards at low level.</li>
+</ul>
+
+<h2 data-r>List hygiene: bounces are reputation damage</h2>
+<ul>
+<li data-r>Every address verified before it enters a sequence. Target under a 2% bounce rate; treat over 5% as an emergency stop.</li>
+<li data-r>Catch-all addresses separated and sent carefully or not at all.</li>
+<li data-r>Old lists re-verified before reuse. People change jobs, addresses die, and last quarter's clean list is this quarter's bounce farm.</li>
+</ul>
+
+<blockquote data-r>Every bounce tells the provider you do not know who you are emailing. Enough of them and the provider stops caring what you wrote.</blockquote>
+
+<h2 data-r>Sending behaviour and monitoring</h2>
+<ul>
+<li data-r>Human-like sending windows and randomised intervals, not a thousand messages at 9:00 sharp.</li>
+<li data-r>Plain, personal formatting. Heavy HTML, images and attachments belong in newsletters, not cold email.</li>
+<li data-r>Placement tests run weekly, seeding sends across real mailboxes to see where they land.</li>
+<li data-r>Bounce, reply and complaint rates watched per inbox, because one burned inbox can drag a domain down with it.</li>
+<li data-r>Postmaster tools checked for domain reputation, so decay is caught while it is still reversible.</li>
+</ul>
+
+<h2 data-r>The habit that makes it stick</h2>
+<p data-r>Deliverability is not a setup task, it is an operating discipline. Everything above decays: lists age, inboxes accumulate history, providers move the line. The teams that stay in the inbox are the ones with someone watching the numbers weekly and acting on drift early. That discipline is built into everything we send inside <a href="services#s2">Outbound &amp; Pipeline</a>, which is why our campaigns keep working in month six. If your replies vanished and you have not run a placement test, start there, or book a call and we will run the whole checklist against your setup.</p>
+</article></div></div></section>
+<div class="ctaband"><img class="band-img" src="assets/ridgelines-fog.jpg" alt="" loading="lazy"><div class="band-veil"></div><div class="wrap"><div class="ctapanel"><span class="cg"></span><h2>Let&#39;s get your pipeline moving.</h2><a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2jekQFQ5Ny4aO7LEXS1zeKG5qta-lnk4YEx9eosryEtErrGx9ACSKav5i37M6Fj5ukKz2nLF9o?gv=true" target="_blank" rel="noopener">Book a call &#8594;</a></div></div></div>
+<footer class="ft"><div class="wrap"><div class="fgrid"><div class="fb"><a class="brand" href="/">Ascent<i></i></a><p>Pipeline, authority and infrastructure for B2B. One system, one point of accountability.</p></div><div class="fc"><h4>Company</h4><a href="services">Services</a><a href="industries">Industries</a><a href="about">About</a><a href="results">Case studies</a><a href="how-we-work">How we work</a><a href="blog">Blog</a></div><div class="fc"><h4>Get in touch</h4><a href="mailto:jamil@getascent.co">jamil@getascent.co</a><a href="tel:+447445551437">+44 7445 551437</a><a href="https://www.linkedin.com/in/getascent/" target="_blank" rel="noopener">LinkedIn</a><a href="contact">Contact</a></div><div class="fc"><h4>Coverage</h4><p>USA &middot; UK &middot; UAE</p><p>Australia &middot; Europe</p></div></div><div class="fbot"><span>&copy; 2026 Ascent&#9642; &mdash; getascent.co</span><span><a href="privacy">Privacy</a> &middot; <a href="terms">Terms</a></span><span>B2B GTM &amp; Outbound</span></div></div></footer>
+<script src="js/nav.js" defer></script><script src="js/fx.js" defer></script></body></html>
